@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* 마이페이지 메뉴 css */
+
+.fixed_bg11 {width:100%; height:956px; padding-top:52px; box-sizing:border-box; position:fixed; left:0; top:0; overflow:hidden; background:url(/resources/images/main/main_renewal/sub/sub08/mypage_bg.jpg) no-repeat; /* margin-top:88px; */ background-position:center; background-size:cover;}
+.mypage_common_wrap {position: relative; /* padding-top: 110px; */ margin: 0 auto; background: transparent;}
+.mypage_common_wrap ~ .footer {position: relative;} /* 마이페이지 fixed_bg 때문에 relativel 줌. 나중에 수정하면 삭제 */
+
+.position_r {position: relative;} /* 리뉴얼 시 마이페이지 틀어져서 일시적으로 class 추가_삭제하기 */
+.position_r ~ .footer {position: relative;} /* 마이페이지 fixed_bg 때문에 relativel 줌. 나중에 수정하면 삭제 */
+
+
+

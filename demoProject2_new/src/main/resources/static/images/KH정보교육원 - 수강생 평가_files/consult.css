@@ -1,0 +1,235 @@
+@charset "utf-8";
+/* 상담하기 메뉴 + 빠른 상담 css */
+
+.consult_wrap {padding-bottom: 0; margin-bottom: 60px;}
+.consult_wrap .content_section {min-width: 1200px;}
+
+/* @media (max-width: 1280px) {
+  .consult_wrap .l_consult {flex-direction: column; -webkit-box-align: center; -moz-align-items: center; align-items: center;}
+} */
+
+/********** 상담 레이아웃 **********/
+.consult_section {}
+.consult_section .section_title {padding-top: 100px;}
+.consult_section .section_title span {position: relative; z-index: 0;}
+.consult_section .section_title span::before {content: url(/resources/images/counsel/consult_title_circle.png); position: absolute; top: -29px; left: -50px; z-index: -1; /* margin: -29px 0 0 -48px; */}
+.consult_section .section_subtitle {padding-bottom: 35px;}
+.consult_section .consult_banner {width: 1130px; height: 104px; padding: 29px 0 0 188px; margin: 0 auto; background: url(/resources/images/counsel/consult_banner_bg.jpg); color: #fff; font-weight: 500; font-size: 19px; text-align: left; cursor: default;}
+.l_consult {display: -webkit-box; display: -moz-box; display: flex; width: 1130px; margin: 0 auto; padding-top: 30px; border-bottom: 1px solid var(--color-border-gray); font-size: 15px; text-align: left; cursor: default;}
+.l_consult .content_subtitle {padding-bottom: 2px; font-weight: 600; font-size: 16px;}
+.l_consult .l_consult_item {margin-top: 18px;}
+
+	/* 상담 좌측 - 국비 100% 문구, 대표번호 */
+.l_consult_item_left {position: relative; width: 50%; padding: 0 40px 35px 0; border-right: 1px solid var(--color-border-gray);}
+.l_consult_item_left .l_consult_item {/* padding-left: 30px; */}
+.l_consult_item_left .l_consult_text {padding-bottom: 22px; border-bottom: 1px solid var(--color-border-gray);}
+.l_consult_text p:first-of-type {color: #222; font-weight: 700; font-size: 25px;}
+.l_consult_text p:first-of-type::before {content: url(/resources/images/counsel/consult_text_img.png); margin-right: 5px; vertical-align: -4px;}
+.l_consult_text p:last-of-type {padding-left: 5px; color: #444; font-weight: 500; font-size: var(--font-size-content);}
+.l_consult_text p:last-of-type span {font-weight: 600;}
+.l_consult .fixed_call {position: absolute; bottom: 30px; width: 100%; padding: 24px 0 0 30px; border-top: 1px solid var(--color-border-gray);}
+.l_consult .icon_wrap {overflow:hidden; float:left; width:54px; margin:6px 10px 0 0;}
+.l_consult .icon_wrap .actionCon {position: absolute; top: 50px; left: 58px;}
+.l_consult .fixed_call ul {float: left; padding-top: 6px; line-height: 1.1;}
+.l_consult .fixed_call ul li:first-child {color: #111; font-size: 32px; font-weight:700;}
+.l_consult .fixed_call ul li:last-child {padding-left:2px; color: #444; font-weight: 500; font-size: 15px;}
+
+.l_consult .l_consult_item_right {width: 50%; /* padding: 20px 30px 30px 40px; */padding: 0 30px 30px 40px;}
+/* .consult_section:not(.register_section) .l_consult .l_consult_item_right .l_consult_item:first-child {margin-top: 15px;} */
+
+
+/* 과정 총 3depth */
+	/* 라디오_네모박스 - 1 교육희망 과정(IT/게임 제작/영상 제작), 교육희망 지점 */
+.consultBox_radio_wrap {/* height: 50px; border: 1px solid var(--color-border-gray); */ font-weight: 500; font-size: 15px;font-size: 16px; text-align:center; line-height: 48px;}
+.consultBox_radio_wrap input {-webkit-appearance: button;}
+.consultBox_radio_wrap .radio {float: left; width: -webkit-calc(100% / 3); width: calc(100% / 3); height: 100%;height: 50px; border: solid var(--color-border-gray); border-width: 0 1px 1px 0; background-color: #fff; cursor:pointer;}
+.consultBox_radio_wrap .radio:nth-of-type(3n+1) {border-left: 1px solid var(--color-border-gray);}
+.consultBox_radio_wrap .radio:nth-of-type(-n+3) {border-top: 1px solid var(--color-border-gray);}
+.consultBox_radio_wrap input:checked + .radio {background-color: var(--color-blue); color: #fff;}
+
+.l_consult_item_categoryMain {} /* 1 교육희망 과정 */
+
+.l_consult_item_branch {} /* 교육희망 지점 */
+
+	/* 라디오_네모박스 - 2 관심 과정_게임 제작/영상 제작 선택했을 경우 */
+#consult_category_game {display: none;}
+#consult_category_media {display: none;}
+
+
+	/* 라디오/체크박스_체크표시 - 2 희망과정, 3 세부 교육과정 */
+.l_consult_item .category {font-size: var(--font-size-content); letter-spacing: 0;}
+.consultCheck_radio_wrap input {-webkit-appearance: button;}
+.consultCheck_radio_wrap .checkmark_label {display: inline-block; margin: 8px 0 12px; font-weight: 600; cursor: pointer;}
+.consultCheck_radio_wrap .checkmark_label .checkmark {display:inline-block; width: 20px; height: 20px; border-radius: 3px; border: 1px solid #bec7d3; margin-right: 8px; background-color: #fff; vertical-align: top; cursor:pointer;}
+.consultCheck_radio_wrap input:checked + .checkmark_label .checkmark {padding: 3px 0 0 5px; border-color: var(--color-blue);}
+.consultCheck_radio_wrap input:checked + .checkmark_label .checkmark::before {content: ''; position: absolute; width: 2px; height: 6px; margin: 5px 0 0 0; border-radius: 2px; transform: rotate(-42deg); background: var(--color-blue);}
+.consultCheck_radio_wrap input:checked + .checkmark_label .checkmark::after {content: ''; position: absolute; width: 2px; height: 12px; margin: 0 0 0 5px; border-radius: 2px; transform: rotate(39deg); background: var(--color-blue);}
+
+		/* 라디오_체크표시 - 2 희망과정_IT 선택했을 경우_자바개발자/정보보안 전문가/KDC/KDT */
+#consult_category_it {}
+.consultCheck_radio_wrap .checkmark_label .label_text_small {padding-left: 27px; color: #666; font-weight: 500; font-size: 13px; line-height: 15px;}
+
+.consultCheck_radio_wrap .category_tooltip {display: inline-block; width: 17px; height: 17px; border-radius: 50%; border: 1px solid var(--color-gray); margin-left: 5px; font-weight: 500; font-size: 12px; line-height: 16px; text-align: center;}
+.consultCheck_radio_wrap .category_tooltip_text {display: none; position: absolute; z-index: 1; width: 494px; padding: 20px 22px 19px; margin-top: 6px; border: 1px solid var(--color-gray); background-color: #fff; color: #222; font-weight: 500; font-size: 15px; letter-spacing: -0.03em;}
+.consultCheck_radio_wrap .category_tooltip:hover + .category_tooltip_text {display: block;}
+
+		/* 체크박스_체크표시 - 3 세부 교육과정 */
+.l_consult_item_category_detail {display: none;} /* 3depth 전체 */
+.consult_category_detail {padding-bottom: 20px; color: #555; font-weight: 500; font-size: var(--font-size-content)}
+.consult_category_detail .consultCheck_radio_wrap {/* display: grid; */display: none; grid-template-columns: repeat(3, 1fr);}
+
+.quickBottom_section .l_consult_item_category_detail {margin-bottom: 85px;} /* 빠른상담은 우측에 문의내용칸이 없어 height가 짧아서 추가 */
+
+	/* 라디오_네모박스 - 연령, 최종학력, 직업 - 3칸(.consultBox_radio_wrap) 기준이라 4칸용(.consultBox_radio_wrap_4) 추가 */
+.consultBox_radio_wrap_4 .radio {width: -webkit-calc(100% / 4); width: calc(100% / 4);}
+.consultBox_radio_wrap_4 .radio:nth-of-type(4) {border-top: 1px solid var(--color-border-gray); border-left: 0;}
+
+	/* 문의내용 */
+.l_consult_item_comment {}
+.l_consult_item_comment textarea {width: 100%; height: 108px; padding: 15px 17px; border: 1px solid var(--color-border-gray);}
+
+	/* 신청자 정보, 신청버튼 */
+.l_consult_item .name {width: 100%; height: 50px; border: 1px solid var(--color-border-gray); margin-bottom: 10px; text-align: center;}
+.l_consult_item .mobileBox {display: -webkit-box; display: -moz-box; display: flex; -webkit-box-pack: justify; -moz-justify-content: space-between; justify-content: space-between; line-height: 48px;}
+.l_consult_item .mobileBox .mobile {width: 151px; height: 50px; border: 1px solid var(--color-border-gray); text-align: center;}
+.l_consult .l_consult_btn {margin-top: 50px;}
+.l_consult .l_consult_btn .btn {border-radius: 5px; font-weight: 700;}
+
+	/* 개인정보처리방침 동의 라디오 */
+.l_consult_agree {margin-top: 10px;}
+.clause_agree_wrap {font-size: 14px;}
+.clause_agree_wrap p {color: #666; font-weight: 500; font-size: 13px;}
+.clause_agree_wrap p::before {content: '*'; display: inline-block; height: 17px; margin: 5px 2px 0 0; font-weight: 400; font-size: 15px; vertical-align: -3px;}
+.clause_agree_wrap label button {font-weight: 500; border-bottom: 1px solid; line-height: 1;}
+.clause_agree_wrap .checkmark_label {display: inline-block; cursor: pointer;}
+.clause_agree_wrap .checkmark_label .checkmark {display: inline-block; width: 16px; height: 16px; padding: 3px 0 0 2px; margin-right: 4px; border: 1px solid #bec7d3; background: #fff; vertical-align: -4px;}
+.clause_agree_wrap input:checked + label .checkmark {}
+.clause_agree_wrap input:checked + label .checkmark::before {content: ''; position: absolute; width: 10px; height: 6px; border: solid #111; border-width: 0 0 2px 2px; transform: skew(1deg) rotate(310deg); background: transparent;}
+
+
+
+/********** 국비대상자 간편조회 **********/
+.simple_wrap {}
+.simple_wrap .l_consult .l_consult_btn {margin-top: 38px;}
+
+
+
+/********** 방문상담 예약 **********/
+.visit_wrap {}
+.visit_wrap .visit { display:inline-flex; position: relative;}
+.visit_wrap .visit .datetime_wrap { position: relative; }
+.visit_wrap .visit input {position: relative; z-index: 1; height: 50px; padding-right: 55px; border: 1px solid var(--color-border-gray); background-color: transparent; background-position: right; background-repeat: no-repeat; color: var(--color-blue); font-weight: 700; text-align: right; cursor: pointer;}
+.visit_wrap .visit #date {width: 257px; border-right: 0; background-image:url(/resources/images/counsel/consult_visit_date.jpg);}
+.visit_wrap .visit #time {width: 237px; background-image:url(/resources/images/counsel/consult_visit_time.jpg);}
+.visit_wrap span.label_date, .visit_wrap span.label_time { position: absolute; left: 13px; top: 16px; z-index: 0; color: #999; font-weight: 500; }
+	/* 방문상담예약 (예약날짜) */
+.calendar_wrap { overflow: hidden; padding-bottom: 15px; }
+.calendar { width: 305px; position: absolute; top: 49px; background:#fff; box-shadow: 1px 13px 8px -4px rgba(0,0,0,0.1); display: block; z-index: 10;}
+.calendar .top { background: #00a0ff; height: 50px; }
+.calendar p {width:90px; padding-top:16px; margin:0 auto; color:#fff; font-size:15px; text-align:center;}
+.calendar p span { color: #fff; }
+.calendar .prev {float:left; width:27px; height:27px; margin-left:75px; margin-top:11px; background:url('/resources/images/main/main_renewal/sub/sub09/arrow_before.png') no-repeat;}
+.calendar .next {float:right; width:27px; height:27px; margin-top:-24.5px; margin-right:76px; background: url('/resources/images/main/main_renewal/sub/sub09/arrow_after.png') no-repeat;}
+.calendar .prev_off { background: url('/resources/images/main/main_renewal/sub/sub09/arrow_before.png') no-repeat; }
+.calendar .next_off { background: url('/resources/images/main/main_renewal/sub/sub09/arrow_after.png') no-repeat; }
+.calendar .week { padding: 0 6px; background: #fff; color: #222; overflow: hidden; height: 45px; border-bottom:1px solid #dae0e9; border-right:1px solid #dae0e9; border-left:1px solid #dae0e9; }
+.calendar .week li { color: #222; width: 41px; float: left; line-height: 45px; text-align: center; }
+.calendar .dates { border: 1px solid #dae0e9; padding: 9px 6px; overflow: hidden; border-top:0;}
+.calendar .dates li { float: left; padding: 0 5px; }
+.calendar .dates li a {display:block; width:31px; height:31px; border-radius:50px; color:#4f5f6f; font-size:14px; text-align:center; line-height:30px;}
+.calendar .dates li a:hover {color:#fff; background:#00a0ff;}
+.calendar .dates li .off { color: #aeb5bb; }
+.calendar .dates li .off:hover { background: #fff; color: #aeb5bb; }
+.calendar .dates li .on { color: #fff; background: #00a0ff; border-radius: 50px; }
+	/* 방문상담예약 (예약시간) */
+.begin_time{ top:0; left:255px; }
+.end_time{ top:0; right:0; }
+.reserved_time{ font-size:14px ;font-weight: 500; }
+.time {display: none; position: absolute; top: 49px; left: 257px; z-index: 10; width: 237px; background:#fff; box-shadow: 1px 18px 8px -4px rgba(0,0,0,0.1);}
+.time .title { height: 45px; line-height: 45px; background: #283444; text-align: center; color: #fff; font-size: 14px; }
+.time .select { height:300px; border: 1px solid #dae0e9; overflow: auto; border-right:0; }
+.time ul.select li{ border-bottom:1px solid #dae0e9; }
+.time ul.select li:last-child{ border-bottom:0 !important; }
+.time .select a { height: 43px; color: #222; line-height: 43px; display: block; padding-left: 9px; }
+.time .select a:hover { color: #fff; background: #00a0ff; }
+.time .select .on { color: #fff; background: #00a0ff; }
+.time .select .off { color: #cfcfcf; background: #fff; }
+.time .select .off:hover { color: #cfcfcf; background: #fff; }
+.guide_btns { padding: 50px 0 70px 200px; overflow: hidden; }
+.guide_btns a { width: 111px; margin-right: 10px; height: 55px; background: #fa5c3f; line-height: 55px; color: #fff; text-align: center; display: block; float: left; }
+
+
+
+/********** 온라인 수강신청 **********/
+	/* 라디오 - 희망과정_상세과정명 선택 */
+.l_consult_item_curr {}
+.l_consult_item_curr .consult_curr_wrap {position: relative; font-weight: 500; font-size: 13.5px;}
+.consult_curr_input {position: relative; height: 50px;}
+.consult_curr_input::after {content: ''; position: absolute; top: 20px; right: 20px; z-index: 0; width: 7px; height: 7px; border: solid #444; border-width: 0 1px 1px 0; transform: rotate(45deg); cursor: pointer;}
+.consult_curr_input .curr {position: absolute; width: 100%; height: 100%; padding-left: 17px; border: 1px solid var(--color-border-gray); letter-spacing: -0.05em; cursor: pointer;}
+.consult_curr_input .curr::placeholder {font-weight: 400; font-size: 15px;}
+.consult_curr_input .curr::-webkit-input-placeholder {font-weight: 400; font-size: 15px;}
+.consult_curr_input .curr::-moz-placeholder {font-weight: 400; font-size: 15px;}
+.consult_curr_input .curr:-ms-input-placeholder {font-weight: 400; font-size: 15px;}
+.consult_curr_input .curr:-moz-placeholder {font-weight: 400; font-size: 15px;}
+.consult_curr_select {display: none; width: 100%; top: 49px; position: absolute; left: 0; z-index: 1; background: #fff; box-shadow: 1px 18px 8px -4px rgba(0,0,0,0.1);}
+.consult_curr_select .select {overflow: auto; height: auto; max-height: 300px; border: 1px solid #dae0e9; border-right: 0; letter-spacing: -0.05em; cursor: pointer;}
+.consult_curr_select .select li {display: block; height: 43px; border-bottom:1px solid #dae0e9; color: #222; line-height: 43px;}
+.consult_curr_select .select li:last-child{border-bottom: 0;}
+.consult_curr_select .select li:hover {background: #00a0ff; color: #fff;}
+.consult_curr_select .select li label {display: inline-block; width: 100%; height: 100%; padding-left: 17px; cursor: pointer;
+overflow: hidden; padding-right: 10px; text-overflow: ellipsis; word-break: normal; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;}
+
+
+/* 페이지 하단 빠른상담 */
+.quickBottom_section {width: 100%; margin: 40px auto var(--margin-bottom-last-section);}
+.quickBottom_section .consult_topBanner {width: 100%; height: 125px; background: url(/resources/images/counsel/consult_topBanner_bg.jpg) center no-repeat; background-color: #1d2e61; text-align: center; cursor: default;}
+.quickBottom_section .consult_topBanner .consult_topBanner_wrap {display: grid; grid-template-columns: repeat(3, 1fr); align-items: center; width: var(--min-width-page); height: 100%; margin: 0 auto; padding: 9px 33px 0;}
+.quickBottom_section .consult_topBanner ul:last-child {padding-right: 88px;}
+.quickBottom_section .consult_topBanner ul li:first-child {color: #e9e9e9; font-weight: 400; font-size: var(--font-size-content);}
+.quickBottom_section .consult_topBanner ul li:last-child {color: #fff; font-weight: 700; font-size: 18px;}
+	/* 페이지 하단 빠른상담 - 2023 리뉴얼용. 원복으로 사용 X */
+/* .quickBottom_section {margin: 40px auto var(--margin-bottom-last-section);margin: 40px auto 0; padding-bottom: var(--padding-bottom-content); border-radius: 60px; background: #e3e5eb;}
+.quickBottom_section .section_title {padding-top: 100px;}
+.quickBottom_section .l_consult {width: min(1200px, 100%); margin: 0 auto; padding-top: var(--padding-common-main);}
+.quickBottom_section .radio_wrap .radio {background: #d5d7de;}
+
+@media (max-width: 1280px) {
+  .quickBottom_section .l_consult {flex-direction: column; -webkit-box-align: center; -moz-align-items: center; align-items: center;}
+} */
+
+
+	/* 간편상담 팝업 */
+#popup_quick {overflow-y: scroll;}
+/* #popup_quick::-webkit-scrollbar { width: 0; } */
+#popup_quick::-webkit-scrollbar-track { background: rgb(0 0 0 / 80%); }
+.popup_quick .popup_layer_cont {width: 1400px;width: 1300px; border-radius: 46px; background: #fff; box-shadow: 2px 9px 8px rgba(0,0,0, .13);}
+.popup_quick .popup_layer_cont .popup_content {padding: 78px 107px 96px 93px;padding: 70px 80px 75px 60px;}
+.popup_quick .l_consult {gap: 0 50px;}
+.popup_quick .section_title {padding-top: 0; text-align: left;}
+.popup_quick .section_subtitle {text-align: left;}
+.popup_quick_close {position: absolute; top: 22px; right: 45px; color: #333; font-weight: 500; font-size: 38px;}
+.popup_quick_talk {position: absolute; top: 70px; right: 106px; font-size: var(--font-size-content); text-align: center;}
+.popup_quick_talk svg {width: 64px; height: 64px; padding: 12px 9px 10px; margin-bottom: 6px; border-radius: 18px; background: #fae100;}
+/* .popup_quick .l_consult {padding-top: var(--padding-common);} */
+
+@media (max-width: 1408px) {
+  .popup_quick .popup_layer_cont {top: 0; left: 0; width: 100%; margin: 0 !important;}
+  .popup_quick .l_consult {flex-direction: column; -webkit-box-align: center; -moz-align-items: center; align-items: center;}
+}
+
+
+/********** 상담신청완료 **********/
+.consultResult_wrap {margin-bottom: 60px; background-image: url(/resources/images/counsel/consult_result_bg2.png); background-position: center bottom; background-repeat: no-repeat;}
+.consultResult_wrap .consult_result_section::before {content: url(/resources/images/counsel/consult_result_bg1.png); float: right; margin-right: 83px;}
+.consultResult_wrap .consult_result {text-align:center;}
+.consult_result p {letter-spacing: -0.075em;}
+.consult_result .section_title {padding-top: 85px;}
+.consult_result .section_title::before {content: ''; display: block; width: 70px; height: 70px; margin: 0 auto 18px; background-image: url(/resources/images/counsel/consult_result_icon.png); background-repeat: no-repeat; background-size: cover;}
+.consult_result .section_title span {color: var(--color-blue); font-weight: 700;}
+.consult_result .content_explain {margin: 30px 0 15px; font-size: 18px;}
+.consult_result p:last-of-type {font-weight: 400; font-size: 23px;}
+.consult_result a {display: block; width: 188px; height: 60px; margin: 65px auto 0; border-radius: 8px; background: #222; color: #fff; font-weight: 500; font-size: 20px; line-height: 60px;}
+
+
+

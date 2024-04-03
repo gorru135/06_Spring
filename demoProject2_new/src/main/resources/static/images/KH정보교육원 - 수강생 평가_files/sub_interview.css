@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/* 취업생인터뷰&기업체인터뷰&기업체특강 상세_210705 */
+#interview_view4 {overflow: hidden; width:1040px; margin:0 auto;}
+#interview_view4 .wrap {width:1040px; overflow: hidden;}
+#interview_view4 .viewleft {width:320px; float:left; margin-top:50px;}
+#interview_view4 .viewright {width:650px; float:right; margin-top:46px;}
+#interview_view4 img {clear:none; float:none;}
+#interview_view4 > img {margin-bottom:0px;}
+
+#interview_view4 .viewleft .line_left {width:320px; height:3px; background:#222; padding-bottom: 0;}
+#interview_view4 .viewleft .line_left + div {margin-top:27px;}
+#interview_view4 .viewleft h1 {font-size: 24px; color: #ff1800; font-weight: 800; line-height:1.1;}
+#interview_view4 .viewleft .part_title {color:#ff1800; font-size:18px;}
+
+#interview_view4 h5 {padding-bottom:5px; color:#ff1800; font-weight: 500; font-size:16px; line-height:1.5;}
+#interview_view4 .text_left {color:#222; line-height:1.2; font-size:15px; margin-bottom:0;}
+
+#interview_view4 .viewright img {margin-bottom:34px;}
+#interview_view4 .viewright .employed_title p {color: #222; line-height: 1.2; font-size: 15px; padding-bottom:30px;}
+#interview_view4 .viewright div.text {padding-bottom:32px;}
+#interview_view4 .viewright div.text p {color:#5b5b5b; font-size:16px; text-align:justify; line-height: 1.5;}
+#interview_view4 td {/* padding-bottom:3px; color:#5b5b5b; */padding-bottom:5px; color:#333; font-size:16px; text-align:justify; line-height:1.5;}
+#interview_view4 td.fir {float:left; width:3.5em; font-size:16px; /* color:#5d5d5d; */color:#333; vertical-align:top;} /* 답변자 성명 표시할 때 */
+/* #interview_view4 td.std_answer {} */
+#interview_view4 .interview_bottom_logo {/* float:left; */ width:26px; height:26px; margin-top:13px; margin-left:0;}
+
+/* 기업체인터뷰 상세_20220113 */
+#company_contents {}
+#company_contents #interview_view4 {}
+#company_contents #interview_view4 * {box-sizing:border-box;}
+#interview_view4 .company_top {width:100%; height:auto; margin-top:40px; padding:0 70px 50px; background:#f2f5f9;}
+#interview_view4 .company_top .company_top_img {position:relative; width:900px; height:300px;}
+#interview_view4 .company_top .company_top_img img {position:absolute; top:-40px; width:100%; height:100%;}
+#interview_view4 .company_top .company_top_info {width:90%; height:auto; margin:0 auto; font-weight:500; text-align:center;}
+#interview_view4 .company_top .company_top_info .company_top_cname {font-weight:900; font-size:42px;}
+#interview_view4 .company_top .company_top_info .company_top_name {font-weight:600; font-size:18px; line-height:2;}
+#interview_view4 .company_top .company_top_info .company_top_name::after {content:""; display:block; width:50px; height:1px; margin:18px auto 24px; background:#dae0e9;}
+#interview_view4 .company_top .company_top_info .company_top_explain {color:#5b5b5b; font-size:16px;}
+
+	/* 수료생&취업생인터뷰+기업체인터뷰 상세_220217 */
+#interview_view4 .interview_table4 {text-align:left;}
+#interview_view4 .interview_table4 th {padding-bottom:5px; color:#ff1800; font-weight: 500; font-size:16px;}
+#interview_view4 .interview_table4 tr:not(:first-of-type) th {/*padding-top:32px;*/padding-top:29px;}
+#interview_view4 .interview_table4 + h5 {padding-top:32px;}
+#interview_view4 .interview_table4 img {width:100%; margin:0;}
+
+#interview_view4 .interview_table4 + img {margin-top:32px;}
+	
+	
+	/* 기업체인터뷰 하단 기업체로고_추후에 기업체초청특강폼도 통일_20220113 */
+.viewright .company_logo_box {width:auto; max-width:270px;max-width:50%; margin:0 auto;}
+.viewright .company_logo_box img {max-width:100%;}
+
+/* 기업체인터뷰&기업체특강 회사소개 */
+#interview_view4 .com_logo > img {margin-bottom:20px;}
+#interview_view4 #interview_table2 {width:100%; margin-bottom:50px; text-align:left; border-top:1px solid #222; margin-top:5px;}
+#interview_view4 #interview_table2 th {width: 155px; border-bottom:1px solid #dae0e9; background:#f2f5f9; font-weight:normal; font-size: 15px; text-align:center;}
+#interview_view4 #interview_table2 td {border-bottom:1px solid #dae0e9; padding:15px 25px; color:#222; font-weight:400; font-size:15px; text-align:initial; line-height:1.3;}
+#interview_view4 #interview_table2 td p {color:#5b5b5b; font-weight:500;}
+#interview_view4 #interview_table2 td a {color:#5b5b5b; font-weight:700;}
+#interview_view4 #interview_table2 td .middot {padding-left:12px; font-size:14px;}
+#interview_view4 #interview_table2 td .middot::before {content:"·"; width:3px; margin:0 4px 4px -7px;}
+
+.interview_img_content{ width:650px; } 
+.interview_img_content .img1 {margin-bottom:20px;}
+.interview_img_content .img2 {margin-bottom:26px;}
+.interview_img_content .img3 {margin-bottom:28px;}
+
+#board_view .board_view_botton .apply_btn {width:140px; margin:0 auto;}
+#board_view .board_view_botton .arrowAction .lb-before .arrow-icon {left:49px;}
+
+/* 수료생&취업생인터뷰 1명_220104 */
+#interview_view4 .interview_top {position:relative; width:100%; height:430px;}
+#interview_view4 .interview_top .interview_top_info {box-sizing:border-box; width:100%; height:403px; padding:45px; background:#f2f5f9; font-weight:900;}
+#interview_view4 .interview_top .interview_top_info p:first-child {font-size:17px; line-height:3.5;}
+#interview_view4 .interview_top .interview_top_info p.interview_top_name {font-size:42px; line-height:2.2;}
+#interview_view4 .interview_top .interview_top_info p.interview_top_name span {font-weight:500; font-size:30px;}
+#interview_view4 .interview_top .interview_top_info p.interview_top_name + p {width:298px; font-weight:500; font-size:16px; letter-spacing:-0.075em;}
+#interview_view4 .interview_top .interview_top_info p:last-child::before {content:""; display:block; width:50px; height:1px; margin:28px 0; background:#dae0e9;}
+#interview_view4 .interview_top .interview_top_info p:last-child {position:absolute; bottom:74px; color:#5b5b5b; font-weight:400; font-size:15px; letter-spacing:-0.075em;}
+
+#interview_view4 .interview_top .interview_top_img {position:absolute; top:40px; right:50px;}
+#interview_view4 .interview_top .interview_top_img img {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

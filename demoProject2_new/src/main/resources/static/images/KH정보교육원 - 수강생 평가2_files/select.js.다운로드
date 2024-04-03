@@ -1,0 +1,40 @@
+
+(function($){
+ $.fn.extend({
+  customStyle : function(options) {
+	if(this.hasClass("customStyleFlase")){
+		return false		
+	}
+   return this.each(function() {
+   var currentSelected = $(this).find(":selected");
+   console.log(currentSelected.val());
+   var spanSelectedId = $(this).attr('id');
+   //var selectFirstChild = $(this).find(':first-child').val();
+  
+   $(this).after('<span class="customStyleSelectBox"><span class="customStyleSelectBoxInner" id="span_'+spanSelectedId+'">'+currentSelected.text()+'</span></span>').css({position:'absolute', opacity:0,fontSize:$(this).next().css('font-size')});
+   var selectBoxSpan = $(this).next();
+   var selectBoxWidth = parseInt($(this).width()) - parseInt(selectBoxSpan.css('padding-left')) -parseInt(selectBoxSpan.css('padding-right'))+5;   
+   var selectBoxSpanInner = selectBoxSpan.find(':first-child');
+   var lineheight = $(this).height();
+    selectBoxSpan.css({width:selectBoxWidth, height: lineheight+'px', lineHeight: lineheight+'px', display:'inline-block'});
+    selectBoxSpanInner.css({width:selectBoxWidth, display:'inline-block'});
+    $(this).change(function(){
+    selectBoxSpanInner.text($(this).find(':selected').text()).parent().addClass('changed');
+   });
+   });
+ }
+ });
+})(jQuery);
+$(function(){
+	
+	if( typeof(custom_select_style_deny) != 'undefined' && custom_select_style_deny == true ) return;
+	
+	if( $('select').customStyle ) {
+		$('select').customStyle();
+	}
+});
+
+/* 
+ * var selectBoxHeight = parseInt(selectBoxSpan.height()) - parseInt(selectBoxSpan.css('padding-top')) - parseInt(selectBoxSpan.css('padding-bottom'));
+ * 
+ * .height(selectBoxHeight)  */

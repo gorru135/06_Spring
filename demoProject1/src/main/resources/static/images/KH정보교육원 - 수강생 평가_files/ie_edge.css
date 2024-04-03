@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+select::-ms-expand { display: none; }
+.welfare_benefits_wrap .welfare_benefits_cont .welfare_benefits ul li{ margin-right:15px !important; }
+.head_sub_left .head_sub_left_text{ letter-spacing: -0.5px; }
+#advice_slide .labels{ padding-top:40px; height:170px !important; }
+#advice_slide .labels span{ display: inline !important; }
+.myclass_info .three_box .calendar{ position:relative; top:1px; z-index:2; }
+.myclass_info .three_box .info_month .scroll_box{ overflow-y: scroll !important; overflow-x: hidden !important; }
+.myclass_info .study_video ul li a span[name='durationText']{ bottom:6px !important; }
+select{ border-width: 1px; border-style:solid; }
+#search_schoolname_list, #search_majorname_list{ width:306px !important; }
+.search_majorname_list{ left:42%; }
+
+.edu_back_02 .free_curr{ width:145px; }
+.edu_back_01 .edu_title{ padding-top:145px; height:420px !important; }
+
+/*faq 라인부분*/
+#faq td.question:after{ background-image:url('/resources/images/main/main_renewal/sub/sub09/ie_edge_line.jpg')no-repeat; min-width: 1px; min-height: 70% !important; margin-top:3px; top:auto !important; display:-ms-inline-flexbox; align-items: center; justify-content: center; }
+.btnAction .arr .ico-arr{ margin:4px 12px; }
+.main_notice .actionBtn21 .ico-plus2 span{ margin-top:0; }
+td.division_left:after{  min-width: 1px; min-height: 100% !important; top:auto !important; display:-ms-inline-flexbox; align-items: center; justify-content: center; }
+input#company{ height:38px !important; margin-right: 3px !important; }
+.bottom_nav_num .phone_cont p{ white-space: nowrap; }
+
+.bulb-top{ background:#ffd119; }
+.bulb-middle-1 { border-top:25px solid #ffd119; border-left:2px solid #ffd119; border-right:2px solid #ffd119; }
+.bulb-middle-2 { border-top:42px solid #ffd119; /*border-left:24px solid #ffd119; border-right: 24px solid #ffd119;*/ }
+.bulb-middle-3 { border-top:42px solid #ffd119; border-left: 6px solid #ffd119; border-right: 5px solid #ffd119; }
+
+.num_question .num_content{ padding-left:100px; box-sizing: border-box; }
+
+.banner_bot1_combox_btnbox ul li a{ padding:23px 0; font-family:"Noto Sans KR", sans-serif; }
+.banner_bot1_combox .banner_bot1_combox_mid table th{ font-family:"Noto Sans KR", sans-serif; font-weight: 500; }
+.banner_bot1_page2 .banner_bot1_combox .banner_bot1_combox_mid{ margin:56px 0 0 62px; line-height:1.6; font-weight: 500;}
+.banner_bot1_page3 .banner_bot1_combox .banner_bot1_combox_mid{ margin:49px 0 0 60px; line-height:1.5; font-weight: 500;}
+.banner_bot .banner_bot1_page4 .banner_bot1_page4_btn a{ margin:29px auto 0; font-family:"Noto Sans KR", sans-serif; }
+
+.banner_bot1_comtable #major_n { display: block; float: left; margin-top:-3px; }
+/*ie에서 자동으로 보이는 x버튼삭제*/
+input[type=text]::-ms-clear {
+	display: none;
+	} 
+
+
+.boxevent{ top:41% !important; }
+.letter span.here{ font-family:'GothamBlack'; }
+.total_num{ font-family:'GothamBlack'; }
+ @font-face{
+   font-family: 'GothamBlack';
+      src: url('/resources/css/font/Gotham-Black.eot');
+      src: url('/resources/css/font/Gotham-Black.eot?#iefix') format('embedded-opentype'),
+      url('/resources/css/font/Gotham-Black.ttf') format('truetype'),
+      url('/resources/css/font/Gotham-Black.woff') format('woff'), /* Modern Browsers */
+      url('/resources/css/font/Gotham-Black.otf') format('opentype'); /* Open Type Font */
+    }
+
+ /*이벤트배너 애니메이션위치*/
+.security_page .round, .java_page .round{ top:33px; right:83px; }
+.rightarrow{ top:23.2px !important; }
+.banner_bot .banner_bot1_page4 .banner_bot1_page4_btn a{ padding:10px 0; }
+}
+
+
+/*---------------edge 12 (all) 일 경우 css----------------*/
+
+@supports (-ms-ime-align:auto) {
+.selector { property:value; } 
+.btnAction .arr .ico-arr{ margin:4px 12px; }
+.main_notice .actionBtn21 .ico-plus2 span{ margin-top:0; }
+
+.bulb-top{ background:#ffd119; }
+.bulb-middle-1 { border-top:25px solid #ffd119; border-left:2px solid #ffd119; border-right:2px solid #ffd119; }
+.bulb-middle-2 { border-top:42px solid #ffd119; /*border-left:24px solid #ffd119; border-right: 24px solid #ffd119;*/ }
+.bulb-middle-3 { border-top:42px solid #ffd119; border-left: 6px solid #ffd119; border-right: 5px solid #ffd119; }
+
+.num_question .num_content_in{ padding-left:100px !important; box-sizing: border-box; }
+
+}
+
+
+
+

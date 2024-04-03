@@ -1,0 +1,505 @@
+@charset "utf-8";
+
+/*메인 좌측 이벤트성 텍스트*/
+.eventCont { float:left; /*margin-top:12px; display: flex; align-items: center; float: left; width: 290px; margin-top: 14px;*/ }
+.eventCont .box { position: relative; display: flex; justify-content: center; flex-direction: column; cursor: pointer; margin-left:65px; }
+.eventCont .box .title { width: 100%; position: relative; display: flex; align-items: center; margin-bottom:3px; }
+.eventCont .box .title .block { 
+  width: 0%; 
+  height: inherit; 
+  background: #14a7ff; 
+  position: absolute; 
+  -webkit-animation: mainBlock 0.75s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  -ms-animation: mainBlock 0.75s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards; 
+  display: flex; 
+}
+.eventCont .box .title h1 { 
+  color: #000; 
+  font-size: 12px; 
+  -webkit-animation: mainFadeIn 0.55s forwards; 
+  -ms-animation: mainFadeIn 0.55s forwards; 
+  -webkit-animation-delay: 0.55s;
+  -ms-animation-delay: 0.55s;
+  opacity: 0; 
+  display: flex;
+  align-items: baseline; 
+  position: relative; 
+  font-family: 'GmarketSansMedium'; 
+  font-weight: 600; 
+}
+.eventCont .box .title h1 span { 
+   width: 0px; 
+   height: 0px; 
+   -webkit-animation: load 0.5s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+   -ms-animation: load 0.5s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+   -webkit-animation: popIn 0.65s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards; 
+   -ms-animation: popIn 0.65s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards; 
+   -webkit-animation-delay: 1s;
+   -ms-animation-delay: 1s;
+   position: absolute; 
+   bottom: 14px; 
+   right: -8px; 
+   font-size:11px; 
+   font-family: 'GmarketSansMedium'; 
+}
+.eventCont .box .role { 
+  width: 100%; 
+  position: relative; 
+  display: flex; 
+  align-items: center; 
+}
+.eventCont .box .role .block { 
+  width: 0%;
+  height: inherit; 
+  background: #14a7ff; 
+  position: absolute; 
+  -webkit-animation: secBlock 0.85s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards; 
+  -webkit-animation-delay: 0.85s; 
+  -ms-animation: secBlock 0.85s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards; 
+  -ms-animation-delay: 0.85s; 
+  display: flex; 
+}
+
+.eventCont .box .role p { 
+  -webkit-animation: secFadeIn 1s forwards; 
+  -ms-animation: secFadeIn 1s forwards; 
+  -webkit-animation-delay: 1.5s;
+  -ms-animation-delay: 1.5s;
+  opacity: 0; color: #005cdd; 
+  font-size: 15px!important; 
+  text-transform: uppercase; 
+  font-family: 'GmarketSansBold'; 
+  line-height: 1.1; 
+ }
+.eventCont .role .x{ 
+  -webkit-animation: secFadeInn 2.3s forwards !important; 
+  -ms-animation: secFadeInn 2.3s forwards; 
+  -webkit-animation-delay: 2.3s !important; 
+  -ms-animation-delay: 2.3s !important; 
+  margin-left:74px; 
+}
+.eventCont .role p.detail{ 
+  font-size:11px !important; 
+  color:#343434; 
+  margin-top:4px; 
+  font-family: 'GmarketSansMedium'; 
+  font-weight: 100; 
+  -webkit-animation: secFadeInT 2.3s forwards !important; 
+  -webkit-animation-delay: 2.3s !important;
+  -ms-animation: secFadeInT 2.3s forwards !important; 
+  -ms-animation-delay: 2.3s !important;
+} 
+@keyframes mainBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes secBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes popIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+    bottom: 45px;
+  }
+  65% {
+    width: 7px;
+    height: 7px;
+    bottom: 0px;
+    width: 15px;
+  }
+  80% {
+    width: 10px;
+    height: 10px;
+    bottom: 20px;
+  }
+  100% {
+    width: 7px;
+    height: 7px;
+    bottom: 8px;
+  }
+}
+@keyframes secFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes secFadeInn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes secFadeInT {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.eventCont .spinner{ position: absolute; top:20px; }
+.eventCont .cube1 { position: absolute; background:url(/resources/images/main/main_renewal/left_top_icon2.png); width: 59px; height: 59px; }
+.eventCont .animated { 
+  -webkit-animation-duration: 0.45s; 
+  -ms-animation-duration: 0.45s;
+  -webkit-animation-fill-mode: both; 
+  -ms-animation-fill-mode: both; 
+}
+.eventCont .animated.infinite { 
+  -webkit-animation-iteration-count: 1; 
+  -ms-animation-iteration-count: 1; 
+}
+.eventCont .rollIn { 
+  -webkit-animation-name: rollIn; 
+  -ms-animation-name: rollIn; 
+}
+
+@keyframes rollIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    -ms-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+  }
+}
+
+
+.boxevent{
+  position: absolute;
+  top: 46%;
+  left: 50.5%;
+  text-align: center;
+  transform: translate(-50%,-50%);
+  overflow: hidden;
+  -webkit-animation: reveal 2s linear forwards;
+  -webkit-animation-delay: 2s; 
+  -ms-animation: reveal 2s linear forwards;
+  -ms-animation-delay: 2s; 
+
+}
+@keyframes reveal {
+  0%{
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+  30%{
+    width: 61px;
+    height: 10px;
+    opacity: 1;
+    border: 3px solid #8ac1f4;
+    background:#ebf4f9;
+  }
+  60%{
+    width: 61px;
+    height: 10px;
+    opacity: 1;
+    border: 3px solid #8ac1f4;
+    background:#ebf4f9;
+  }
+  80%{
+    width: 61px;
+    height: 10px;
+    opacity: 1;
+    border: 3px solid #8ac1f4;
+    background:#ebf4f9;
+  }
+  100%{
+    width: 61px;
+    height: 10px;
+    opacity: 1;
+    border: 3px solid #8ac1f4;
+    background:#ebf4f9;
+  }
+}
+
+/*20201211_ 20201년도 모집컨텐츠 이벤트배너 모션*/
+.smile-wrapper{ 
+  width:290px;
+  height:88px; 
+  position:relative; top:0;
+}
+
+/* 20210512제거_클라우드 인재 임팩트
+.face {
+  width: 50px;
+  height: 53px;
+      animation: smile 1.7s ease-in forwards; 
+}
+.letter {
+  position: absolute;
+  top: 17px;
+  text-align: left;
+  margin-left:68px; 
+}
+.letter p{ 
+  font-size: 15px; 
+  font-family: 'GmarketSansBold';
+  color:#d80b0d;
+ }
+ .letter span.here{ 
+  font-size: 12px;
+  font-family: 'GmarketSansMedium';
+  font-weight: 600; 
+  line-height: 1.2;
+ }
+ .letter span.click{        
+  font-size: 10px;
+  font-family: 'GmarketSansMedium';
+  margin-left: 5px;
+ }*/
+ 
+ 
+ /* 20210610_로고좌측배너 */
+.face {cursor:pointer; width: 290px; height:54px; position:absolute; left:0; top:17px;}
+ 
+ 
+/* .letterstring {
+  opacity: 0;
+}
+.firststring {
+  animation: first-string-show 0.5s cubic-bezier(0.96, 1, 0.79, 1.36) forwards;
+  animation-delay: 0s;
+}  */
+
+@-moz-keyframes smile {
+  from {
+    transform: rotate(-200deg) scale(0.1);
+  }
+  40% {
+    transform: rotate(30deg) scale(1);
+    box-shadow: none;
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100%{
+   box-shadow: none;
+  }
+}
+@-webkit-keyframes smile {
+  from {
+    transform: rotate(-200deg) scale(0.1);
+  }
+  40% {
+    transform: rotate(30deg) scale(1);
+    box-shadow: none;
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100%{
+   box-shadow: none;
+  }
+}
+@-o-keyframes smile {
+  from {
+    transform: rotate(-200deg) scale(0.1);
+  }
+  40% {
+    transform: rotate(30deg) scale(1);
+    box-shadow: none;
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100%{
+   box-shadow: none;
+  }
+}
+@keyframes smile {
+  from {
+    transform: rotate(-200deg) scale(0.1);
+  }
+  40% {
+    transform: rotate(30deg) scale(1);
+    box-shadow: none;
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100%{
+   box-shadow: none;
+  }
+}
+@-moz-keyframes first-string-show {
+  from {
+    transform: rotate(40deg);
+    transform-origin: -85% 70%;
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+    transform-origin: -85% 70%;
+  }
+}
+@-webkit-keyframes first-string-show {
+  from {
+    transform: rotate(40deg);
+    transform-origin: -85% 70%;
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+    transform-origin: -85% 70%;
+  }
+}
+@-o-keyframes first-string-show {
+  from {
+    transform: rotate(40deg);
+    transform-origin: -85% 70%;
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+    transform-origin: -85% 70%;
+  }
+}
+@keyframes first-string-show {
+  from {
+    transform: rotate(40deg);
+    transform-origin: -85% 70%;
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+    transform-origin: -85% 70%;
+  }
+}
+
+.rightarrow {    
+   width: 10px;
+    height: 7px;
+    position: absolute;
+    cursor: pointer;
+    top: 26.5px;
+    right: 12px;
+}
+.rightarrow {
+    animation-name: arrowbounceR;
+    animation-duration: 0.65s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes arrowbounceR {
+    from {transform: scale(1) translateX(0);}
+    to {transform: scale(1.2) translateX(5px);}
+}
+
+.rightarrow.sliderDone {
+    animation-name: arrowbounceR_finish;
+    animation-duration: 0.65s;
+    animation-iteration-count: 1;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes arrowbounceR_finish {
+    to {transform: scale(1) translateX(0px);}
+}    
+    
+/* 20210616_animation */
+.topLeft_ani {
+  font-family: 'GmarketSansMedium';
+  font-size: 10px;
+  letter-spacing:-0.05em;
+/*   background:radial-gradient(circle closest-side,#9be9ea 100%,#fff) right/calc(200% - 1em) 100%; */
+  background:radial-gradient(circle closest-side,#9be9ea 80%,#fff) right/calc(198% - 1em) 100%;
+  animation:c4 1.4s infinite alternate linear;
+  position:absolute; top:41px; left:69px; padding-top:2px;
+}
+
+.topLeft_ani::before {
+  content:"자세히보기 >>";
+  line-height: 1em;
+  color:#373737;
+/*   background:radial-gradient(circle closest-side,#9be9ea 95%,#373737); */
+  background:radial-gradient(circle closest-side,#9be9ea 100%,#373737);
+  -webkit-background-clip:text;
+  background-clip:text;
+  background-size:inherit;
+  background-position: inherit;
+  box-sizing:border-box;
+}
+
+@keyframes c4{
+  100%{background-position: left}
+}
+
+/* 20210617 */
+.topLeft_ani2 {
+  font-family: 'GmarketSansMedium';
+  font-size: 10px;
+  letter-spacing:-0.05em;
+  background:linear-gradient(135deg,#0000 calc(50% - 0.5em),#6bd5d7 0 calc(50% + 0.5em),#0000 0) right/300% 100%;
+  animation:ani2 2.6s;
+  animation-delay: 1.5s;
+  animation-iteration-count:1;
+  position:absolute; top:40px; left:65px; left:68px; padding-top:2px;
+}
+
+.topLeft_ani2::before {
+  content:"자세히보기>>";
+  color:#0000;
+  padding:0 5px 0 2px;
+  background:linear-gradient(135deg,#000 calc(50% - 0.5em),#fff 0 calc(50% + 0.5em),#000 0);
+  -webkit-background-clip:text;
+  background-clip:text;
+  background-size:inherit;
+  background-position: inherit;
+  box-sizing:border-box;
+}
+
+@keyframes ani2 {
+  100%{background-position: left;}
+}

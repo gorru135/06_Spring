@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+select {padding-right: 5px; padding:0 10px; border-color:#dae0e9; background: url(/resources/images/main/main_renewal/select_more.jpg) no-repeat; background-position:center right 9px; vertical-align:middle; text-align-last:center; -moz-text-align-last:center; -webkit-appearance:none;}
+select option{ padding-left:50px; }
+#birth1 span.customStyleSelectBox{     width: 95px;
+    height: 44px; }
+
+span.customStyleSelectBox{
+	background-color:#ffffff;
+	color:#222;
+	border:1px solid #dae0e9;
+	background:url('/resources/images/main/main_renewal/select_more.jpg') no-repeat center right;
+	padding: 0 30px 0 10px;
+	*vertical-align: 5px;
+	cursor: pointer;
+}
+span.customStyleSelectBox.changed{
+	background-color: #ffffff;
+}
+.customStyleSelectBoxInner{
+	white-space:nowrap;
+	padding: 0;
+}
+
+.customStyleSelectBorderStrong{
+	border-color: #ececec;
+}
+.visit select { line-height: 23px; width:168px; height:48px; cursor: pointer; }
+.visit span.customStyleSelectBox,
+.visit span.customStyleSelectBox.changed,
+.visit span.customStyleSelectBoxInner,
+.visit span.customStyleSelectBorderStrong {
+	vertical-align: 5px;
+}
+
+.visit> span.customStyleSelectBox{
+	background-color:#ffffff;
+	font-size: 14px;
+	color:#222;
+	border:1px solid #dae0e9;
+	background:url('/resources/images/main/main_renewal/sub/sub09/visit_icon02.jpg') no-repeat center right;
+	padding: 0 30px 0 10px;
+	cursor: pointer;
+}
+.visit> span.customStyleSelectBox.changed{
+	background-color: #ffffff;
+	font-size: 14px;
+	padding: 0 30px 0 10px;
+	cursor: pointer;
+}
+.visit> .customStyleSelectBoxInner {
+	white-space:nowrap;
+	font-size: 14px;
+	padding: 0;
+	color:#222;
+}
+.visit> .customStyleSelectBorderStrong{
+	border-color: #ececec;
+	padding: 0;
+}
+
+.university_only select option[disabled] {display:none;}
+.university_only .university_area {width:138px; height:52px; padding-left:10px; margin-right:3px; text-align-last:auto;}
+.university_only .university_name {width:161px; height:50px; padding-left:10px; margin-right:2px; border:1px solid #dae0e9; vertical-align:middle; text-align-last:auto;}
+.university_only .university_name::placeholder {color:#222;}
+.university_only .university_major {width:288px; height:52px; padding-left:10px; text-align-last:auto;}
+
+#join_frm .join_table td span.customStyleSelectBox,
+#join_frm .join_table td span.customStyleSelectBox.changed,
+#join_frm .join_table td span.customStyleSelectBoxInner,
+#join_frm .join_table td span.customStyleSelectBorderStrong
+{ font-size: 14px; }
+#join_frm .join_table td span.customStyleSelectBox { padding-left: 10px; vertical-align: -1px; *vertical-align: 4px; }
+#find .frm span.customStyleSelectBox { vertical-align: -1px; *vertical-align: 10px; }
+.board_total span.customStyleSelectBox { padding-left: 15px; vertical-align: 1px; *vertical-align: 5px; }
+.board_total span.customStyleSelectBoxInner { color: #888888; }

@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* 취업지원센터 메뉴 css */
+
+/********** 수강후기 **********/
+.phrase_wrap {}
+.phrase_wrap .pdivision {color:#5b5b5b; padding-top:5px; font-size:14px;}
+.phrase_wrap .ddivision{color: #5b5b5b; padding-top: 5px; font-size: 13px;}
+.phrase_wrap .division_left{ width: 100px; border-bottom: 20px solid white; background: #f2f5f9; text-align: center; box-sizing: border-box; padding: 0 30px; align-items: center; position: relative; }
+.phrase_wrap td.division_left:after {content:""; position:absolute; top:25%; right:0; z-index: 1; width: 1px; height:50%; background:var(--common-border);}
+.phrase_wrap .division_right {/* width:985px; */ height:auto; padding:25px 30px 25px 36px; border-bottom:20px solid white; background:#f2f5f9; background-position:8px 14px; background-repeat:no-repeat; color:#222; font-size:15px; line-height:1.25;}
+.phrase_wrap .line {width: 1px; padding: 30px 0; align-items: center; display: block; background: #dae0e9; }
+
+#board_phrase {width:var(--common-width); margin:0 auto; text-align:left;}
+#board_phrase .phrase_head { padding-bottom: 25px; }
+#board_phrase .phrase_head h1 { font-size: 26px; color: #222; text-align: center; padding-bottom: 10px; }
+#board_phrase .phrase_head p { color: #717171; text-align: center; }
+#board_phrase .phrase_head p span { color: #fa5c3f; }
+#board_phrase .phrase_total { border-bottom: 1px solid #dae0e9; text-align:right;}
+#board_phrase .phrase_total span { color: #222; }
+#board_phrase .phrase_list li { color: #222; border-bottom: 1px solid #dae0e9; padding: 15px 10px 15px 36px; }
+#board_phrase .phrase_list li p { color: #6d6e72; padding-top: 5px; font-size: 11px; }
+#board_phrase .phrase_btn { display: block; height: 54px; line-height: 54px; color:#fff; font-size: 15px; background:url('/resources/images/main/main_renewal/sub/sub04/more.png') no-repeat; background-position: center right 24px; padding-left:30px; }
+#board_phrase .phrase_btn span { font-size: 15px; color:#fff; font-weight: 500; }
+#board_phrase .phrase_btn img { vertical-align: -4px; padding-left: 3px; }
+
+
+/********** KH 채널 ON **********/
+.channelON_wrap {}
+.channelON_wrap .channel_tab {width:100%;}
+
+.channel_wrap{ z-index: 2; position:relative; }
+.community_video_wrap{ width:100%; margin:0 auto; overflow:hidden; padding-bottom:100px; box-sizing: border-box; }
+/* .last_video_cont{ padding-bottom:0 !important; } */
+.last_video_cont img.bg_icon{ display: none; }
+.community_video_cont{ width:1130px; height:258px; margin: 0 auto; margin-top:25px; position:relative; }
+.community_video_cont img.bg_icon{ position: absolute; bottom:0; left:-56px; }
+.community_video_cont ul li{ position:relative; width:363px; height:auto; float: left; margin-right:20px; cursor: pointer; }
+.community_video_cont ul li:nth-child(3n){ margin-right:0; }
+.community_video_cont ul li div[name="thumbnail_cover"] { width: 364px; height: 204px; position: absolute; top: 0; background: rgba(31,31,57,0.5); }
+.community_video_cont ul li img[name="play_btn"] { width: 63px; height: 63px; position: absolute; top: 27%; left: 158px; }
+.community_video_cont ul li span[name="durationText"] { bottom: 52px; right: 0px; position: absolute; padding: 4px; font-size: 13px; background: #000; color: #fff; }
+.community_video_cont .thumbnail_text {margin-top:12px;}
+.community_video_cont .thumbnail_text p:first-child {font-size:16px; color:#222; text-align:center;}
+.community_video_cont .thumbnail_text p:nth-child(2) {font-size:15px; color:#5b5b5b; text-align:center;}
+.fixed_bg6_1 p:last-child{ font-size:16px; color:#fff; text-align: center; }
+
+.second_video_cont ul{ float: right; }
+.second_video_cont ul li:nth-child(2n){ margin-right:0 !important; }
+
+
+@media(max-width:991px){
+.video_play iframe{ max-width: 90% }
+
+}
+.secondtab_cont{ width:1280px; }
+ul.slideshow{ width:1130px; margin:0 auto; }
+.community_video_cont .slide_cont li[id^="tab"]{ width:100%; height: 255px !important; position: relative;  display: none; overflow: hidden; }
+.community_video_cont .slide_cont li.active{ display:block; }
+.community_video_cont .slide_cont li div#nex,div#prev{ position:absolute; z-index:1; top:40%; transform:translateY(-50%); cursor:pointer; }
+.community_video_cont .slide_cont li div#nex{ right:0px; }
+.community_video_cont .slide_cont li div#prev{ left:0px; }

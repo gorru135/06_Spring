@@ -1,0 +1,142 @@
+/**
+ * 
+ */
+const common_extensions = ["jpg", "bmp" , "gif", "png", "jpeg", "zip", "tar","gz","bz2","rar","alz","ace","txt","xlsx","pdf","pptx","docx","doc","show","7z","hwp"];
+const image_extensions = ["jpg", "bmp" , "gif", "png", "jpeg"];
+const compression_extensions = ["zip", "tar","gz","bz2","rar","alz","ace","7z"];
+const doc_extensions = ["txt","xlsx","pdf","pptx","docx","doc","show","hwp"];
+const excel_extensions = ["xlsx"];
+const onlyzip_extensions = ["zip"];
+
+function dateformat(str, gbn){
+	if(str == null || str == "undefined" || str == "" || str == "00000000"){
+		return "";
+	}else{
+		
+		if(gbn==null || gbn == "undefined" || gbn == ""){
+			gbn = ".";
+		}
+		
+		if(str.length == 8){
+			var yy = str.substr(0,4);
+			var mm = str.substr(4,2);
+			var dd = str.substr(6,2);
+			return yy + gbn +  mm + gbn + dd;
+		}else if(str.length == 6){
+			var yy = str.substr(0,4);
+			var mm = str.substr(4,2);
+			return yy + gbn +  mm ;
+		}else if(str.length == 14){
+			var yy = str.substr(0,4);
+			var mm = str.substr(4,2);
+			var dd = str.substr(6,2);
+			return yy + gbn +  mm + gbn + dd;
+		}
+	}
+}
+
+
+function numberformat(n, len) {
+
+	n += '';
+	if(n==''||n=='0') return n;
+	n = stripCommas(n);
+	n = parseInt(n,10);
+
+    var reg = /(^[+-]?\d+)(\d{3})/;   
+    n += '';
+
+    while (reg.test(n))
+        n = n.replace(reg, '$1' + ',' + '$2');
+    
+    return n;
+}
+
+function stripCommas(numString) {
+    var re = /,/g;
+    return numString.replace(re, "");
+}
+
+function stringlength(str, len){
+	if(str.length > len){
+		str = str.substr(0, len)+"...";
+	}
+	
+	return str;
+}
+
+//소수점
+function numberformat2(n, len){
+	var r;
+	if(n.toString().indexOf(".") != -1){
+		r = n.toString().split(".")[0]+"."+n.toString().split(".")[1].substr(0,len);
+	}else{
+		r = n;
+	}
+	
+	return r;
+}
+
+/**
+ * 텍스트 리플레이스
+ * @param str
+ * @param orgStr
+ * @param repStr
+ * @returns
+ */
+function replaceAll(str,orgStr,repStr){
+    if(str == "" || str == undefined || str == null){
+		return ""
+	}else{
+		return str.split(orgStr).join(repStr);
+	}
+}
+
+function fnCheckExtensions(ele, extension){
+	let fileLength = ele.value.length;
+	let fileDot = ele.value.lastIndexOf(".");
+	let fileType = ele.value.substring(fileDot+1,fileLength).toLowerCase();
+	
+	if(extension.indexOf(fileType) < 0){
+		alert(fileType+"파일은 첨부가 불가합니다. 허용확장자 : "+extension.join(","));
+		ele.value = '';
+		ele.onchange();
+	}
+	
+	if(!ele.id.includes('mediaFile') && ele.files[0] && ele.files[0].size >= 20971520){
+		alert("20Megabyte를 초과하는 파일을 업로드 하실수 없습니다. \n파일 크기 : "+ ele.files[0].size.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")+"byte");
+		ele.value = '';
+		ele.onchange();
+	}
+	
+}
+
+window.onload = function () {
+	var fileElements = document.querySelectorAll("input[type=file]");  
+	fileElements.forEach(function(fileElement){
+		fileElement.addEventListener('change',function(e){
+			console.log(this, this.dataset,this.dataset.allowextensions)
+			let checkExtensions = this.dataset.allowextensions == undefined ? 'common_extensions' : this.dataset.allowextensions;   
+			switch(checkExtensions){
+			case "image_extensions" :
+				fnCheckExtensions(this , image_extensions)
+				break;
+			case "compression_extensions" :
+				fnCheckExtensions(this , compression_extensions)
+				break;
+			case "doc_extensions" :
+				fnCheckExtensions(this , doc_extensions)
+				break;			
+			case "excel_extensions" :
+				fnCheckExtensions(this , excel_extensions)
+				break;
+			case "onlyzip_extensions" :
+				fnCheckExtensions(this , onlyzip_extensions)
+				break;
+			default:
+				fnCheckExtensions(this , common_extensions)
+				break;
+			}
+		})
+	})
+}

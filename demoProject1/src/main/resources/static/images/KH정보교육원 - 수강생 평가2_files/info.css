@@ -1,0 +1,430 @@
+@charset "utf-8";
+/* 교육원소개 메뉴 css */
+
+/* KHoverview, About KH 공통 */
+.overview_wrap .subtitle_top, .about_wrap .subtitle_top {margin-bottom:12px; color:#222; font-weight:800; font-family:'Gotham-Black', sans-serif; font-size:36px; text-align:center; letter-spacing:-0.05em; line-height:1;}
+.overview_wrap .subtitle_text_top, .about_wrap .subtitle_text_top {margin-bottom:30px; font-size:16px; font-weight:500; text-align:center; color:#5b5b5b; line-height:20px;}
+.overview_wrap .subtitle, .about_wrap .subtitle {margin-bottom:12px; padding-top:92px; color:#222; font-size:34px; font-weight:500; text-align:center; letter-spacing:-0.1em; line-height:1;}
+.overview_wrap .subtitle_text, .about_wrap .subtitle_text {margin-bottom:30px; color:#656565; font-size:16px; font-weight:400; line-height:20px; /* letter-spacing:-0.1em; */}
+
+/********** KHoverview **********/
+.overview_wrap #content_sub_wrap {padding-bottom:0; line-height:1.5;}
+.overview_wrap .subtitle_text {color:#222;}
+	/* OUR MISSION */
+.overview_wrap .mission_wrap {width:100%; padding:0px;}
+.overview_wrap .mission {width:1130px; height:318px; margin:0 auto; position:relative; text-align:center;}
+.overview_wrap .mission .circle {width:80px; height:80px; background:#fff; border-radius:50%; box-shadow:0 0 0 30px #eff3f7; position:absolute; z-index:-1; top:78px; right:-39px;}
+
+.overview_wrap .mission .mission_box_wrap {position:relative; display:flex; justify-content:space-between; z-index:3;}
+.overview_wrap .mission .mission_box_wrap .mission_box {width:364px; height:482px; background:#fff; box-shadow:0 20px 15px rgba(0, 0, 0, 0.05);}
+
+.overview_wrap .mission_box .mission_box_text {padding:31px;}
+.overview_wrap .mission_box .mission_box_text p:first-of-type {font-family:'RixBusanStationPH', NanumGothic, Arial, Helvetica, sans-serif, "굴림체"; font-size:38px; line-height:1; color:#eff3f7;}
+.overview_wrap .mission_box .mission_box_text p:nth-of-type(2) {font-family:'Gotham-Black',sans-serif; font-size:15px; color:#283442; margin-top:-17px;}
+.overview_wrap .mission_box .mission_box_text div {width:40px; height:1px; background:#e5e5e5; margin:21px auto 23px;}
+.overview_wrap .mission_box .mission_box_text p:nth-of-type(3) {padding-bottom:13px; font-size:21px; font-weight:900; line-height:1.2; letter-spacing:-0.075em;}
+.overview_wrap .mission_box .mission_box_text p:last-of-type {font-size:15px; font-weight:400; color:#5b5b5b; line-height:19px; letter-spacing:-0.075em;}
+	/* 기업이념 */
+.overview_wrap .philosophy_wrap {width:100%; height:750px; background:#f2f5f9; text-align:center;}
+.overview_wrap .philosophy {width:1130px; height:100%; background:transparent; margin:0 auto; position:relative;}
+.overview_wrap .philosophy_wrap .philosophy > img {margin:-40px 0 0 -80px;}
+.overview_wrap .philosophy_wrap .philosophy > div {position:absolute; top:282px; left:58px; width:1014px;}
+.overview_wrap .philosophy_wrap .philosophy div .philosophy_box div {margin-top:20px; display:flex; justify-content:space-between;}
+.overview_wrap .philosophy_wrap .philosophy div .philosophy_box div p {display:inline-block; width:135px; font-size:16px; font-weight:bold; line-height:1.2; letter-spacing:-0.075em;}
+
+
+/********** About KH = KH문화 **********/
+.about_wrap {}
+.about_wrap #content_sub_wrap {padding-bottom:0;}
+.about_top {width:100%;}
+.about_top .paradigm {width:100%;}
+.about_wrap .circle {width:80px; height:80px; background:#fff; border-radius:50%; box-shadow:0 0 0 30px #eff3f7; position:absolute; z-index:-1; top:78px; right:-39px;}
+.paradigm_box_wrap, .special_box_wrap, .with_box_wrap, .concert_box_wrap {width:1130px; margin:0 auto; display:flex; justify-content:space-between;}
+.paradigm_box_wrap .paradigm_box {width:364px; height:350px; background:#f0f3f8;}
+.paradigm_box p:first-of-type {padding-top:25px; color:#222; font-size:21px; font-weight:700; line-height:2.2;}
+.paradigm_box p:last-of-type {color:#5b5b5b; font-size:15px; font-weight:400; line-height:20px;}
+
+.about_middle {width:100%;}
+.about_middle .special {width:100%; height:650px; background:no-repeat bottom url('/resources/images/intro/about_special.jpg');}
+.special_box_wrap .special_box {width:265px; height:310px; box-shadow:30px 35px 25px #0002; /* overflow:hidden; */ position:relative; cursor:default;}
+.special_box_wrap .special_box:first-of-type {background:url('/resources/images/intro/about_special1.jpg');}
+.special_box_wrap .special_box:nth-of-type(2) {background:url('/resources/images/intro/about_special2.jpg');}
+.special_box_wrap .special_box:nth-of-type(3) {background:url('/resources/images/intro/about_special3.jpg');}
+.special_box_wrap .special_box:last-of-type {background:url('/resources/images/intro/about_special4.jpg');}
+.special_box > p {font-size:18px; font-weight:500; letter-spacing:-0.075em; color:#fff; width:100%; position:absolute; top:250px; z-index:5; transition-duration:.5s;}
+.special_box .special_box_text {width:100%; height:0; background:#0008; position: absolute; bottom: 0; left: 0; right: 0; overflow: hidden; transition:.5s ease;}
+.special_box .special_box_text p {font-size:15px; letter-spacing:-0.1em; color:#fff; padding-bottom:6px;}
+.special_box .special_box_text p:first-child {font-size:18px; font-weight:500; letter-spacing:-0.075em; margin-top:65px; opacity:0; transition:.5s ease;}
+.special_box .special_box_text > div {width:30px; height:1px; background:#fff5; margin:12px auto 17px;}
+
+.special_box:hover .special_box_text {height:100%;}
+.special_box:hover > p {/* transition-delay:.1s; */ transition-duration:.1s; opacity:0;}
+.special_box:hover .special_box_text p:first-child {transition-delay:.2s; transition:.2s ease; opacity:1;}
+
+.about_bottom {}
+.about_bottom .with {width:100%; height:564px; background:no-repeat url('/resources/images/intro/about_with.jpg'); background-size:cover;}
+.with_box_wrap .with_box {width:364px; height:261px; background:#fff; box-sizing:border-box; padding:35px 45px; position:relative; cursor:pointer;}
+.with_box p:first-of-type {font-size:21px; font-weight:700; line-height:2.2; letter-spacing:-0.1em; color:#fe1700;}
+.with_box p:last-of-type {font-size:16px; font-weight:400; line-height:24px; letter-spacing:-0.1em; color:#5b5b5b;}
+.with_box .thumb_hover {position:absolute; left:0; top:0; width:364px; height:261px; background:url('/resources/images/main/main_renewal/sub/common/plus_hover.png') no-repeat; background-position: center; background-color: rgba(0, 0, 0, 0.6); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF, endColorstr=#99FFFFFF); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF, endColorstr=#99FFFFFF)"; display:none;}
+.with_box .thumb_hover2 {position:absolute; left:0; top:0; width:364px; height:261px; background:url('/resources/images/main/main_renewal/sub/common/plus_hover2.png') no-repeat; background-position: center; background-color: rgba(0, 0, 0, 0.6); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF, endColorstr=#99FFFFFF); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF, endColorstr=#99FFFFFF)"; display:none;}
+.with_box div {width:40px; height:1px; background:#e5e5e5; margin:13px auto 7px;}
+
+
+
+/********** 걸어온길 **********/
+.history_wrap .tabcontent_tab1 {display: block;}
+
+#history_cont{ position: relative; width: 100%; /*margin:20px auto 0;*/ margin:0 auto; }
+
+#menu {}
+#menu ul {list-style:none; display:inline-block; height: 55px; padding:0; margin:0 auto;}
+#menu li {float:left; border-bottom: 0; width:190px; height:55px; line-height:53px; text-align:center;}
+#menu li:first-child, #menu li:nth-child(2) {margin-right:5px;}
+#menu li a {text-decoration:none; display:block; color: #222; background-color:#f0f3f8; font-size:15px; box-sizing:border-box; height:55px;}
+#menu ul li a.hover_tab {background-color: var(--color-blue); color:#fff; font-size:15px;}
+
+#history_cont .history_tab {position:relative; width:1400px; margin:0 auto;}
+#history_cont .title_years {margin-left:-8px; color:#f0f3f8; font-size:110px; font-weight:bold; text-align:center; letter-spacing:-0.08em;}
+
+#history_cont .history_tab#tabcontent_tab1 {height:3210px;}
+#history_cont .history_tab#tabcontent_tab1 .title_years {margin-bottom:100px;}
+.history_year_2022 {margin:200px 0 35px;}
+.history_year_2021 {margin:272px 0 340px;}
+.history_year_2020 {margin-bottom:570px;}
+.history_year_2018 {margin-bottom:650px;}
+.history_year_2019 {margin-bottom:640px;}
+
+#history_cont .history_tab#tabcontent_tab2 {height:2543px;}
+#history_cont .history_tab#tabcontent_tab2 .title_years {margin-bottom:100px;}
+.history_year_2016 {margin-bottom:400px;}
+.history_year_2015 {margin:850px 0 370px;}
+.history_year_2014 {margin:350px 0 430px;}
+.history_year_2013 {margin-bottom:90px;}
+
+#history_cont .history_tab#tabcontent_tab3 {height:1920px;}
+.history_year_2009 {margin:55px 0 48px;}
+.history_year_2008 {margin:125px 0 40px;}
+.history_year_2005 {margin:63px 0;}
+.history_year_2004 {margin:40px 0 165px;}
+.history_year_2003 {margin-bottom:680px;}
+.history_year_2001 {margin-bottom:60px;}
+.history_year_2000 {margin:100px 0 50px;}
+
+#history_cont article {position:relative; width:100%; height:auto;}
+#history_cont article > div {display:flex; justify-content:flex-start; width:100%; height:auto;}
+#history_cont article > div .history_year {box-sizing:border-box; width:118px; height:100%; margin-top:-2px; font-size:18px; font-weight:800;}
+#history_cont article .his_text {width:580px; margin-top:-1px;}
+#history_cont article .his_text .emblem {/* transform:translateY(-42%); */margin:-65px 0 15px;}
+#history_cont article .his_text .title {line-height:1.2; font-size:24px; font-weight:500; color:#222;}
+#history_cont article .his_text .title::after {content:''; display:block; margin:25px 0 20px; width:29px; height:3px; background:#ff1800;}
+#history_cont article .his_text .point{color:#ff1800;}
+#history_cont article .his_text p {line-height:1.7; font-size:15px; color:#5b5b5b;}
+#history_cont article .his_text p span {display:inline-block; width:26px; font-size:14px; font-weight:700; color:#5b5b5b;}
+#history_cont article .his_text .img {margin:15px 0 24px;}
+
+#history_cont .history_right_cont {position:absolute; box-sizing:border-box; right:0; height:100%; margin-top:-43px; padding-bottom:100px; border-left:1px solid #dfe6f1; text-align:left; text-align:-webkit-left;}
+#history_cont .history_right_cont img.center_icon {position:absolute; top:0px; left:-12px;}
+#history_cont .history_right_cont article > div {flex-direction:row;}
+#history_cont .history_right_cont article > div .history_year {padding-left:65px;}
+#history_cont .history_right_cont article > div .his_text p span {/* padding-right:10px; */}
+
+/* #history_cont article .his_text .p_right {margin-left:26px;}
+#history_cont article .his_text .span_left {position:absolute; left:118px; padding-top:2px;} */
+
+#history_cont .history_left_cont {position:absolute; box-sizing:border-box; width:50%; height:auto; padding-bottom:100px; text-align:right; text-align:-webkit-right;}
+#history_cont .history_left_cont img.center_icon {position:absolute; top:0px; right:-12px;}
+#history_cont .history_left_cont article > div {flex-direction:row-reverse;}
+#history_cont .history_left_cont article > div .history_year {padding-right:65px;}
+#history_cont .history_left_cont article > div .his_text p span {position:absolute; right:118px; /* padding:2px 0 0 10px; */padding:2px 0 0 0;}
+
+
+/********** 강사소개, 상담선생님 소개 리스트 스타일 **********/
+.intro_list ul {border-top:1px solid #222;}
+.intro_list li {width:1130px; margin:0 auto; padding:40px 35px 40px 35px; border-bottom:1px solid #dae0e9; box-sizing: border-box;}
+#teacher .intro_list li:last-child {border-bottom:0; padding-bottom:0;}
+.intro_list .intro_thum {overflow:hidden; float:left; position:relative; display:flex; align-items:center; width:170px; height:170px; border-radius:50%; margin-right:51px; background:#dbdbdb; text-align:center;}
+.intro_list .intro_thum img{ width: 137%; image-rendering: auto; left: -17%; top: 4%; position: absolute; }
+.intro_list p {color:rgba(34,34,34,0.7); font-size:16px; line-height:20px;}
+.intro_list p > span { display:block; color:#222; padding-top:15px; letter-spacing: -0.08em;}
+.intro_list .intro_txt {display:inline-block; width:839px;}
+.intro_list .intro_txt .intro_content1 {white-space:pre-line; line-height:18px; color:rgba(34,34,34,0.7); font-size:16px; letter-spacing: -0.08em; }
+.intro_list .intro_txt .intro_content2 {display:block; padding-top:16px; color:#222; font-size:16px; line-height:18px; letter-spacing:-0.08em; }
+.intro_list .intro_name{ font-size:21px; color:#222; padding-bottom:5px;}
+.intro_list .intro_info {font-size:15px; padding:5px 0 15px; color:#999; font-weight:400; /* line-height:18px; letter-spacing: -0.03em; */}
+.intro_list .intro_answer {font-size:18px; color:#ff1800; letter-spacing: -0.09em; font-weight:500;}
+.online_btn { width:180px; height:55px; line-height:55px; display:block; color:#fff; background:#fa5c3f; text-align:center; font-size:16px; margin:50px auto 70px;}
+
+/********** 강사소개 **********/
+#teacher {width:var(--common-width); margin:0 auto; text-align:left;}
+#teacher .intro_list .intro_info {color:#5b5b5b;}
+.individual { padding:30px 0; border-bottom:1px solid #ececec; box-sizing:border-box; }
+.individual:first-child { margin-top:70px; border-top:1px solid #ececec; }
+.individual:last-child { border-bottom:0; }
+.individual th { padding:0 30px 0 0; vertical-align:top; }
+.individual td p { text-align:justify; }
+.individual td p:nth-child(1) { font-size:20px; color:#283444; padding-bottom:5px;}
+.individual td p:nth-child(2) { font-size:13px; padding-bottom:15px;}
+.individual td p:nth-child(3) { font-size:20px; color:#f85d3e; }
+.individual td p span { display:block; font-size:14px; color:#283444; padding-top:15px; }
+.half_line { background-color:#dae0e9; width:35px; height:1px; margin:30px 0; }
+#teacher_bottom { overflow: hidden; padding: 20px 0 75px 0; border-top: 1px solid #283444; }
+#teacher_bottom ul { float: left; overflow: hidden; margin-right: 14px; }
+#teacher_bottom .last_ul { margin:10px 0 0 75px; }
+#teacher_bottom li { float: left; margin-right: 5px; cursor: pointer; *margin-right: 5px; position: relative; text-align: center; }
+#teacher_bottom li .ison { display: none; width: 55px; height: 59px; border: 3px solid #5dc0f5; position: absolute; top: 0; left: 50%; margin-left: -30px; }
+#teacher_bottom .head { margin-right: 5px; cursor: default; }
+#teacher_bottom .head:hover span { color: #283444; }
+#teacher_bottom .last { margin-right: 0; }
+#teacher_bottom li span { display: block; letter-spacing: -1px; font-size: 12px; padding-top: 10px; text-align: center; }
+#teacher_bottom .head span { color: #283444; }
+#teacher_bottom .on span, #teacher_bottom li:hover span { color: #5dc0f5; }
+#teacher_bottom .on .ison, #teacher_bottom li:hover .ison { display: block; } 
+
+/********** 상담선생님 소개 **********/
+.jobSupport_wrap .tabcontent_jobSupport1 {display: block;}
+#support {width:var(--common-width); margin:0 auto; text-align:left;}
+#support .apply_btn{ width:194px; margin:0 auto; height:40px; padding:39px 0 0 0; }
+#support .apply_btn .actionBtn22{ margin-left:0; }
+#support .apply_btn .actionBtn22 .lb-before{ color:#222; font-weight: 600; top:5px; left:0; font-size:18px; min-width:170px; }
+#support .apply_btn .actionBtn22 .lb{ color:#222; font-weight: 600; top:6px; white-space: nowrap; position: absolute; font-size:18px; }
+#support .apply_btn .actionBtn22 .lb .arrow-icon{ margin:7px 0 0 10px; }
+#support .apply_btn .arrowAction .lb-before .arrow-icon{ top:-24px; }
+#support .apply_btn .arrowAction .lb-before .arrow-icon{ left:23px; }
+#support .apply_btn .arrowAction .arrow-icon{ width:40px; height:9px; background: url('/resources/images/main/main_renewal/sub/sub_arrow_icon2.png') no-repeat; }
+#support .apply_btn .arrowAction .cir-left, 
+#support .apply_btn .arrowAction .cir-right {width:40px; height:40px; background:rgba(34,34,4,1); left:163px; top:-6px;}
+
+
+/********** 사업 제휴 문의 **********/
+.buiness_ask {width:100%; background:#fff;}
+.buiness_ask table#recruit td select {padding:0 10px 0 7px;}
+.buiness_ask table#recruit .file_hidden {width:78px; height:37px; top:9px; right:357px; cursor:pointer;}
+.buiness_ask table#recruit .file_hidden::-webkit-file-upload-button {cursor:pointer;}
+
+
+/********** 언론보도 **********/
+
+
+/********** 시설안내, 오시는길 공통 **********/
+.contact { width: 1130px; margin:0 auto; padding-bottom: 20px; }
+.contact th { border-bottom: 1px solid #dae0e9; color: #222; width: 200px; font-weight: 500; background:#f2f5f9;}
+.contact td {padding:15px 0 13px 34px; border-bottom:1px solid var(--common-border); color:#5b5b5b; text-align:left;}
+.contact td>img { vertical-align: -3px; margin: 0 3px; }
+.contact .contact_map { padding: 0; }
+
+.contact .contact_map>div { width: 100%; height: 500px; padding: 0; }
+.contact .ulsan_bus { padding: 15px 0 15px 34px; line-height: 18px; }
+.contact .ulsan_bus .ulsan_01 { overflow: hidden; padding-bottom: 15px; padding-top: 5px; }
+.contact .ulsan_bus .ulsan_02 { overflow: hidden; padding-top: 15px; }
+.contact .ulsan_bus div img { float: left; padding-left: 0 3px; }
+.contact .ulsan_bus div p { float: left; padding-left: 10px; color:#5b5b5b; }
+.contact .young_bus { padding: 12.5px 0 12.5px 34px; line-height: 18px; }
+.contact .young_bus .young_01 { overflow: hidden; padding-bottom: 15px; padding-top: 5px; }
+.contact .young_bus .young_02 { overflow: hidden; padding-top: 5px; }
+.contact .young_bus div p { float: left; padding-left: 10px; }
+/********** 시설안내 **********/
+.educationInfo_wrap {}
+.eduinfor_wrap{ display:flex; flex-direction: column; align-items: center; background:#fff;}
+.eduinfor_wrap .eduinfor_tab {box-sizing:border-box; display:inline-block; width:170px; height:55px; background:#f0f3f8; color:#222; font-size:15px; text-align:center; cursor:pointer; line-height:56px;}
+.eduinfor_wrap .tabs{ width: 870px; }
+.eduinfor_wrap .panels{ width:100%; max-width:1130px; overflow:hidden; padding:30px 0 30px 0; border-bottom: 1px solid #222; }
+.eduinfor_wrap .panel{ display:none; }
+.eduinfor_wrap .tabs #five-tab{ margin-right:0; }
+.eduinfor_wrap .contact td {font-weight:500; font-size:16px;}
+.eduinfor_wrap .panel-title {/*  font-size:1.5em; */ font-weight:bold }
+.eduinfor_wrap .radio{ display:none; }
+
+/********** 오시는길 **********/
+.contact_wrap {}
+#contact_button { width:870px; text-align: center; overflow: hidden; height:55px; margin:0 auto 30px;}
+#contact_button li:last-child a {margin-right:0;}
+#contact_button li a span { font-size: 12px; line-height: 1.4; }
+
+
+/********** 강사 구인 **********/
+	/* 탭 */
+.trecruit_subwrap {width:100%; overflow:hidden; margin-top:-12px; margin-bottom:10px; background:#fff;}
+.trecruit_sub {width:100%;}
+.trecruit_sub p:first-child {text-align:center; font-size:65px; color:#f0f3f8; font-weight:bold;}
+.trecruit_sub p:last-child {text-align:center; font-size:34px; font-weight:500; margin-top:-43px; letter-spacing:-0.1em;}
+.trecruit_wrap .trecruit_tap_wrap {position:relative; width:100%; height:80px; float:left; top:0; z-index: 2; background:#fff;}
+.trecruit_wrap .trecruit_tap_wrap .trecruit_tap_box {position:relative; width:385px; margin:13px auto; overflow: hidden;}
+.trecruit_wrap .trecruit_tap_wrap .trecruit_tap_box .trecruit_tap {float:left; width:190px; height:55px; background: #f0f3f8; text-align:center; cursor:pointer;}
+.trecruit_wrap .trecruit_tap_wrap .trecruit_tap_box .trecruit_tap:first-of-type {margin-right:5px;}
+.trecruit_wrap .trecruit_tap_wrap .trecruit_tap_box .trecruit_tap p {color:#222; font-size:16px; letter-spacing:-0.5px; line-height:55px;}
+.trecruit_wrap .trecruit_tap_wrap .trecruit_tap_box .trecruit_tap_on {background:#008eff; }
+.trecruit_wrap .trecruit_tap_wrap .trecruit_tap_box .trecruit_tap_on p {color:#fff;}
+	/* 소개글 */
+.trecruit_wrap{ width: 100%; margin:0 auto; overflow:hidden;}
+.trecruit_wrap p{ text-align: center; }
+.trecruit_cont1{ width: 100%; height:977px; position:relative; margin:0 auto; overflow:hidden; background-size:contain; background: url(/resources/images/main/main_renewal/sub/sub02/trecruit_bg.jpg) no-repeat bottom;}
+.trecruit_cont1 .icon_bg{ position: relative; width: 1200px; margin: 0 auto; }
+.trecruit_cont1 .icon_bg img.left_icon{ position: absolute; top: 67px; z-index: 1; left: -24px; }
+.trecruit_cont1 .icon_bg img.right_icon{ position: absolute; top: 679px; z-index: 1; right: -91px; }
+.trecruit_cont2{ width: 1130px;margin:0 auto; overflow:hidden; }
+.trecruit_title1{ font-size:21px; padding-top: 66px; box-sizing: border-box; }
+.trecruit_title1 .x_text{ font-size: 21px; font-weight: 200; }
+.trecruit_title2{ font-size:34px; font-weight:500; letter-spacing: -0.1em; }
+
+.kh_cont{ width:1130px; height:auto; overflow: hidden; position: relative; margin-top:42px; }
+.kh_cont .kh_left_cont {float:left; width:565px; height:380px;}
+.kh_cont .kh_right_cont {float:right; width:565px; height:380px; padding:50px 0 0 50px; text-align:left;}
+.kh_cont .kh_right_cont p{ text-align: left; font-size: 18px; white-space: nowrap; letter-spacing: -0.1em; line-height: 1.4; }
+.kh_cont .kh_right_cont p.first_txt{ margin-top:44px; }
+.kh_cont .kh_right_cont p.txt_bold{ font-weight: 600; font-size: 19px; }
+
+.kh_cont .smart_left_cont img{ float: right; margin-bottom:44px; }
+.kh_cont .smart_left_cont p{ clear: both; text-align: right; font-size: 18px; white-space: nowrap; letter-spacing: -0.1em; line-height: 1.4; }
+.kh_cont .smart_left_cont p.txt_bold{ font-weight: 600; font-size: 19px; }
+.kh_cont .smart_left_cont{ width:565px; height:380px; float: left;  padding:50px 50px 0 0 ; box-sizing: border-box;}
+
+.kh_cont .smart_right_cont{ width:565px; height:380px; float: right; }
+	/* 채용절차 및 우리들의강사는다릅니다.부분 */
+.trecruit_intro{ width: 100%; height:812px; margin:0 auto; position: relative; }
+.trecruit_intro_cont1{ background:url(/resources/images/main/main_renewal/sub/sub02/process_bg.jpg) no-repeat; height:333px; background-position: center; background-size: cover; }
+.trecruit_intro_cont1 .trecruit_title1_df{ font-size: 32px; color: #fff; line-height: 1.3; font-weight: 600; padding-top: 67px; padding-bottom: 50px; letter-spacing: -0.07em; }
+.trecruit_intro_cont2{ width: 1130px; margin:0 auto; position: relative; top:-142px; z-index: 1; }
+.trecruit_intro_cont2 ul { width: 1130px; position: relative; display: inline-flex; }
+.trecruit_intro_cont2 ul li{ float: left; width: 364px; height: 232px; padding: 43px 0 0 37px; box-sizing: border-box; background: #fff; margin-right: 20px; box-shadow:10px 10px 13px rgba(0,0,0,0.05);}
+.trecruit_intro_cont2 ul li:last-child{ margin-right:0; }
+.trecruit_intro_cont2 ul li p{ text-align: left; font-size: 16px; letter-spacing: -1.2px; color:#5b5b5b; }
+.trecruit_intro_cont2 ul li p:first-child{ color: #fe1700; font-size: 21px; font-weight: 500; margin-bottom: 19px; }
+.trecruit_intro_cont3{ width: 100%; height: 446px; background: #f0f3f8; margin: 0 auto; position: relative; top: -231px; }
+.trecruit_intro_cont3 .intro_cont3{ width:1130px; margin:0 auto; padding-top:175px; box-sizing: border-box; }
+.trecruit_intro_cont3 .intro_cont3_left {float:left; text-align:left;}
+.trecruit_intro_cont3 .intro_cont3_left h1{ font-size:34px; font-weight:500; letter-spacing: -0.1em; }
+.trecruit_intro_cont3 .intro_cont3_left p {text-align:left; font-size:14px; color:#5b5b5b; letter-spacing:-1.5px;}
+.trecruit_intro_cont3 .intro_cont3_left span{ font-size: 15px; font-weight: 500; margin-bottom: 4px; display: block; }
+.trecruit_intro_cont3 .intro_cont3_left .line{ width:403px; height:1px; background: #dfe5f1; margin:22px 0 26px;}
+.trecruit_intro_cont3 .intro_cont3_right{ width:679px; height:185px; margin-left: 50px;}
+	/* 테이블 */
+.tre_table { border-top: 1px solid #222; width: 1130px; margin: 0 auto; margin-top:21px; margin-bottom:80px; }
+.tre_table th{ background:#f2f5f9; border-bottom: 1px solid #dae0e9; color: #222; font-size: 17px; font-weight:700; height: 57px; text-align: center; border-right: 1px solid #dae0e9;}
+.tre_table th:last-child{ border-right:0; }
+.tre_table td{ background:#fff; border-bottom: 1px solid #dae0e9; color: #222; line-height:1.3; font-size: 16px; height: 57px; text-align: left; padding:15px 40px; border-right: 1px solid #dae0e9; letter-spacing: -0.1em; }
+.tre_table td:last-child{ border-right:0; }
+.tre_table td.txt_center{ text-align: center; }
+.tre_table td:nth-child(4){ padding-left:50px; }
+.tre_table td span{ font-size:15px; color:#5b5b5b; } 
+.tre_table td span.kinds{ font-weight: 300; }
+	/* 복리후생 */
+.welfare_benefits_wrap{ width:100%; overflow:hidden; margin:0 auto; padding:80px 0; box-sizing:border-box; border-bottom:1px solid #dae0e9;}
+.welfare_benefits_wrap .welfare_benefits_cont{ width:1130px; margin:0 auto;  }
+.welfare_benefits_wrap .welfare_benefits_cont .welfare_benefits { display: inline-flex; }
+.welfare_benefits_wrap .welfare_benefits_cont .welfare_benefits ul{ display: inline-flex; position: relative; }
+.welfare_benefits_wrap .welfare_benefits_cont .welfare_benefits ul li{ float: left; margin-right: 20px; }
+.welfare_benefits_wrap .welfare_benefits_cont .welfare_benefits ul li{ float: left; margin-right: 20px; }
+
+.welfare_benefits_wrap .welfare_benefits_cont .wel_title p{ text-align: left; white-space: nowrap; font-weight: 400; font-size: 34px; letter-spacing: -0.1em; }
+.welfare_benefits_wrap .welfare_benefits_cont .wel_detail{ font-size: 15px !important; color:#5b5b5b; font-weight: 500; margin-top:9px; letter-spacing: -0.1em; }
+.welfare_benefits_wrap .welfare_benefits_cont .wel_kinds{ width: 860px; margin-left: 65px; }
+.welfare_benefits_wrap .welfare_benefits_cont .wel_kinds p{ margin-top:209px; cursor: default; }
+.welfare_benefits_wrap .welfare_benefits_cont .wel_kinds ul li.one{ width:200px; height:200px; background:url(/resources/images/main/main_renewal/sub/sub02/benefit_01.png); }
+.welfare_benefits_wrap .welfare_benefits_cont .wel_kinds ul li.two{ width:200px; height:200px; background:url(/resources/images/main/main_renewal/sub/sub02/benefit_02.png); }
+.welfare_benefits_wrap .welfare_benefits_cont .wel_kinds ul li.three{ width:200px; height:200px; background:url(/resources/images/main/main_renewal/sub/sub02/benefit_03.png); }
+.welfare_benefits_wrap .welfare_benefits_cont .wel_kinds ul li.four{ width:200px; height:200px; background:url(/resources/images/main/main_renewal/sub/sub02/benefit_04.png); }
+/* 복리후생_건물소개 */
+
+.welfare_benefits_wrap .welfare_benefits_cont .edu_infor{ width: 1130px; margin: 0 auto; display: inline-flex; margin-top:80px; }
+.welfare_benefits_wrap .welfare_benefits_cont .edu_infor_left{ width:560px; margin-right: 10px; overflow: hidden; }
+.edu_infor_left .left_01{ width:560px; height:438px; background:url(/resources/images/main/main_renewal/sub/sub02/edu_infor_left01.jpg); margin-bottom:10px; overflow: hidden; }
+.edu_infor_left .left_02{ width:560px; height:232px; background:url(/resources/images/main/main_renewal/sub/sub02/edu_infor_left02.jpg); margin-bottom:10px; }
+.edu_infor_left .left_03{ width:560px; height:310px; background:url(/resources/images/main/main_renewal/sub/sub02/edu_infor_left03.jpg); margin-bottom:10px; }
+.edu_infor_left .left_04{ width:560px; height:360px; background:url(/resources/images/main/main_renewal/sub/sub02/edu_infor_left04.jpg); }
+
+.edu_infor_right{ width:560px; }
+.edu_infor_right .right_01{ width: 560px; height:310px; background: url(/resources/images/main/main_renewal/sub/sub02/edu_infor_right01.jpg); margin-bottom:10px;}
+.edu_infor_right .right_02{ width: 560px; height:360px; background: url(/resources/images/main/main_renewal/sub/sub02/edu_infor_right02.jpg); margin-bottom:10px;}
+.edu_infor_right .right_03{ width: 560px; height:438px; background: url(/resources/images/main/main_renewal/sub/sub02/edu_infor_right03.jpg); margin-bottom:10px;}
+.edu_infor_right .right_04{ width: 560px; height:232px; background: url(/resources/images/main/main_renewal/sub/sub02/edu_infor_right04.jpg); }
+
+/* 인턴쉽 강사 */
+.internship_cont{ min-width: 1130px; margin: 0 auto; width: 100%; overflow: hidden; }
+.internship_ver1{ width:100%; height:580px; background:url(/resources/images/main/main_renewal/sub/sub02/internshipbg1.jpg)no-repeat; margin-top:32px; background-position: center; background-size: cover;}
+.internship_cont1{ width: 1130px; margin: 0 auto; overflow: hidden; box-sizing: border-box; }
+.institution_list{ width:1130px; margin:0 auto; overflow:hidden; padding-top:136px; box-sizing: border-box; }
+.institution_list p{ letter-spacing: -0.08em; line-height: 1.3; }
+.institution_list ul { width:1130px; margin:0 auto; padding-top:36px; box-sizing: border-box; overflow: hidden; }
+.institution_list ul li{ float:left; margin-right:20px; }
+.institution_list ul li:first-child{ margin-left:113px; }
+.institution_list ul li:last-child{ margin-right:0; }
+.institution_list ul li .txt_cont{ background:#fff; padding-bottom:30px; }
+.institution_list ul li .txt_cont .title{ font-size:18px; font-weight: 600; padding:30px 0 10px 0; color:#222; }
+.institution_list ul li .txt_cont .text{ letter-spacing: -0.12em; }
+.institution_list ul li .txt_cont p{ font-size: 16px; color:#5b5b5b; font-weight: 400; }
+.institution_list p.text1{ font-size:21px; }
+.institution_list p.text2{ font-size:24px; }
+
+.roadMap{ width:100%; margin:0 auto; padding:70px 0 60px 0; box-sizing:border-box; }
+.roadMap_cont{ width:1130px; margin:0 auto; overflow: hidden; }
+.roadMap_cont img{ margin-top:21px; }
+
+.intern_table th{ width:351px; height:95px; }
+.intern_table td span{ color:#00a0ff; font-size: 16px; font-weight: 400; }
+
+.internship_intro { width: 100%; overflow:hidden; margin:0 auto; }
+.internship_intro .ncs_Cont1{ width:1130px; height: 472px; margin:0 auto; }
+.internship_intro .ncs_Cont1 .textCont {width:535px; float:left; padding:30px 0 0 30px; text-align:left;}
+.internship_intro .ncs_Cont1 .textCont b{ margin-top:23px; display: block; margin-bottom:3px; }
+.internship_intro .ncs_Cont1 .textCont p,
+.ncs_Cont1 .textCont b{ font-size:16px; letter-spacing: -0.10em; line-height: 1.4; }
+.ncs_Cont1 .textCont b{ letter-spacing: -0.08em; }
+
+.internship_intro .ncs_Cont1 .textCont p{ color:#5b5b5b; line-height: 1.35; margin-bottom:2px; }
+.internship_intro .ncs_Cont2{ width:1130px; height: 472px; margin:0 auto; }
+.internship_intro .ncs_Cont2 .textCont {width:535px; float:left; padding-top:30px; text-align:left;}
+.internship_intro .ncs_Cont2 .textCont p{ color:#5b5b5b; line-height: 1.35; margin-bottom:2px; }
+.internship_intro .ncs_Cont2 .textCont p,
+.ncs_Cont2 .textCont b{ font-size:16px; letter-spacing: -0.10em; }
+.ncs_Cont2 .textCont b{ letter-spacing: -0.08em !important; }
+.internship_intro .ncs_Cont2 .textCont b{ margin-top:23px; display: block; margin-bottom:3px; }
+.internship_intro .ncs_Cont2 .rightImg{ float: right; }
+.ncs_Cont1 p{ text-align: left; }
+.ncs_Cont2 p{ text-align: left; }
+
+.internship_ver5 {width:100%; height:830px; border-top:1px solid var(--common-border);}
+.internship_intro {width:100%; background:url(/resources/images/main/main_renewal/sub/sub02/internshipbg4_bg.jpg)no-repeat; background-position: top; }
+.internship_cont5 {width:100%; height:auto; margin:0 auto;}
+.internship_cont5 ul{ width:1130px; margin:0 auto; }
+.internship_cont5 ul li{ float: left; margin-right:23px; background:#fff; box-shadow: 10px 31px 22px rgba(31,31,57,0.2); width:265px; }
+.internship_cont5 ul li:last-child{ margin-right:0; }
+.internship_ver5 .trecruit_title2{ padding:70px 0 30px; }
+.internship_ver5 .txt_cont{ height:272px; }
+.internship_ver5 .txt_cont p{ width:100%; color: #5b5b5b; font-size: 16px; letter-spacing: -0.08em; line-height: 1.2; }
+.internship_ver5 .txt_cont img{ padding-bottom:24px; }
+
+/*강사채용 - 마무리*/
+.wrapup_bottom_wrap {width:100%; height:478px; /* overflow: hidden; */ margin:163px auto 0; background:#f0f3f8;}
+.wrapup_bottom_wrap .wrapup_bottom_cont {width:1130px; margin: 0 auto; padding-top:120px;}
+.wrapup_bottom_wrap .wrapup_bottom_cont p:first-child{ font-size:34px; font-weight: 600; margin-top:50px; }
+.wrapup_bottom_wrap .wrapup_bottom_cont p:nth-child(2){ margin-top:6px; }
+.wrapup_bottom_wrap .wrapup_bottom_cont p:last-child{ font-weight: 600 }
+.wrapup_bottom_wrap .wrapup_bottom_cont p{ font-size: 18px; line-height:1.4; letter-spacing: -0.08em }
+
+.internship_ver5 .board_view_botton {width:243px;}
+	/* 지원하기 팝업 */
+#popup_t_recruit .popup_layer_cont {width:524px; position: fixed; margin-left: -272px; margin-top: -257px; box-sizing:border-box;}
+#popup_t_recruit .popup_head {width:524px;}
+#popup_t_recruit .customStyleFlase{ width:314px; height:40px; line-height: 37px; padding:0 10px 0 7px;}
+
+#popup_t_recruit #mobile_sp input {width:94px; text-align: center; padding:0;}
+#popup_t_recruit .email_cont {width:314px; height:40px; margin:0; border:1px solid #dae0e9; box-sizing:border-box;}
+#popup_t_recruit .email_cont input {width:143px; height:38px; text-align: center; border:0; padding:0;}
+
+.popup_t_recruit table { width: 100%; padding: 25px 20px;}
+.popup_t_recruit table th { color: #222; width: 112px; height: 50px; font-weight: 400; font-size: 15px; text-align: right; }
+.popup_t_recruit table td { color: #5b5b5b; padding: 7px 0 7px 15px; }
+.popup_t_recruit table td input { width: 314px; line-height: 38px; height: 40px; border: 1px solid #dae0e9; padding-left: 10px; box-sizing:border-box;}
+.popup_t_recruit table td select { height: 35px; line-height: 35px; }
+.popup_t_recruit table td a { display: inline-block; margin-left: 5px; width: 87px; height: 40px; background: #f0f3f8;  color: #222; line-height: 40px; text-align: center; vertical-align: top;}
+.popup_t_recruit table td input[type=file] { display: none; }
+.popup_t_recruit #tr_file {width:222px;}
+
+.popup_t_recruit .tr_buttons{ padding-top: 20px; padding-bottom: 30px; padding: 23px 0 20px 0; text-align: center; border-top:1px solid #dae0e9; }
+.popup_t_recruit .tr_buttons a{ width: 120px; height: 40px; line-height: 40px; display: inline-block; color: #fff; background: #00a0ff; text-align: center; font-size: 14px; }
+.popup_t_recruit .tr_buttons .cancel{ background: #2a2a4e; }
+
+#trecruit_loading .popup_layer_cont {border-radius: 0;} /* 지원 시, 로딩 팝업 */
+
+

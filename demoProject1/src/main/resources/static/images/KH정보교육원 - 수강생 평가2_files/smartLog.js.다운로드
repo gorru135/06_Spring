@@ -1,0 +1,88 @@
+
+function kh_smartlog(){
+	  var hpt_info = { '_account': 'UHPT-80033', '_server': 'a80' };
+
+	  var script1 = document.createElement('script');
+	  script1.type = 'text/javascript';
+	  script1.innerHTML = 'var hpt_info=' + JSON.stringify(hpt_info) + ';';
+	  document.head.appendChild(script1);
+
+	  var script2 = document.createElement('script');
+	  script2.type = 'text/javascript';
+	  script2.src = '//cdn.smlog.co.kr/core/smart.js';
+	  script2.charset = 'utf-8';
+	  document.head.appendChild(script2);
+
+	  var noscript = document.createElement('noscript');
+	  var img = document.createElement('img');
+	  img.src = '//a80.smlog.co.kr/smart_bda.php?_account=80033';
+	  img.style.display = 'none';
+	  img.style.width = '0';
+	  img.style.height = '0';
+	  img.border = '0';
+	  noscript.appendChild(img);
+
+	  document.body.appendChild(noscript);
+}
+
+function khacademy_smartlog(){
+	  var hpt_info = { '_account': 'UHPT-80033', '_server': 'a80' };
+
+	  var script1 = document.createElement('script');
+	  script1.type = 'text/javascript';
+	  script1.innerHTML = 'var hpt_info=' + JSON.stringify(hpt_info) + ';';
+	  document.head.appendChild(script1);
+
+	  var script2 = document.createElement('script');
+	  script2.type = 'text/javascript';
+	  script2.src = '//cdn.smlog.co.kr/core/smart.js';
+	  script2.charset = 'utf-8';
+	  document.head.appendChild(script2);
+
+	  var noscript = document.createElement('noscript');
+	  var img = document.createElement('img');
+	  img.src = '//a80.smlog.co.kr/smart_bda.php?_account=80033';
+	  img.style.display = 'none';
+	  img.style.width = '0';
+	  img.style.height = '0';
+	  img.border = '0';
+	  noscript.appendChild(img);
+
+	  document.body.appendChild(noscript);
+}
+
+
+/*********************************
+ * 
+function kh_smartlog(){
+	hpt_info={'_account':'UHPT-72015'};
+	console.log("kh_smartlog")
+	
+	let script = document.createElement('script');
+	script.src = '//a72.smlog.co.kr/smart.js';
+	document.head.append(script);
+}
+
+function khacademy_smartlog(){
+	console.log("khacademy_smartlog")
+	hpt_info={'_account':'UHPT-21596', '_server': 'a25'};
+	
+	let script = document.createElement('script');
+	script.src = '//cdn.smlog.co.kr/core/smart.js';
+	document.head.append(script);
+}
+ *******************************/
+
+/*********************************
+2023.12.08 
+*******************************/
+/*
+<!-- Smartlog -->
+<script type="text/javascript">
+var hpt_info={'_account':'UHPT-80033', '_server': 'a80'};
+</script>
+<script language="javascript" src="//cdn.smlog.co.kr/core/smart.js" charset="utf-8"></script>
+<noscript><img src="//a80.smlog.co.kr/smart_bda.php?_account=80033" style="display:none;width:0;height:0;" border="0"/></noscript>
+
+*/
+
