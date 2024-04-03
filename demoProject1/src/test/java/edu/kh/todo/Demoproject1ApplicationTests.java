@@ -1,10 +1,10 @@
-package edu.kh.demo;
+package edu.kh.todo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoProject1ApplicationTests {
+class Demoproject1ApplicationTests {
 
 	@Test
 	void contextLoads() {
