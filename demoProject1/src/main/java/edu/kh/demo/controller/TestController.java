@@ -77,10 +77,6 @@ public class TestController {
 		return "test"; // forward(접두사 + 반환값 + 접미사 경로의 html로 forward)
 	}
 	
-	
-	
-	
-	
-	
+
 	
 }

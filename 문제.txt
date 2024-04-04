@@ -1,0 +1,110 @@
+다음은 학생관리 프로그램에 대한 코드 중 일부이다. 메인페이지에서 학생 이름, 나이, 주소를 입력받아 제출한 뒤 student/select.html 에서 출력하려고 하였으나 원하는 결과가 도출되지 않았다. 문제의 [원인]과 [조치내용]을 모두 찾아 작성하시오. (단, 생략된 코드 또는 클래스는 정상적으로 작동한다고 간주할 것, import 구문은 문제와 관계없음)
+(원인과 조치내용은 여러개일 수 있으며, 반드시 원인에 대한 조치내용을 작성해야 합니다)
+
+[index.html]
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Document</title>
+
+</head>
+
+<body>
+
+<h1>학생 조회</h1>
+
+<form action="/student/select" method="POST">
+
+이름 : <input type="text" name="name"> <br>
+
+나이 : <input type="number" name="age"> <br>
+
+주소 : <input type="text" name="addr"> <br>
+
+<button>제출하기</button>
+
+</form>
+
+</body>
+
+</html>
+
+[Student.java]
+
+@Getter
+
+@Setter
+
+@ToString
+
+@NoArgsConstructor
+
+@AllArgsConstructor
+
+public class Student {
+
+private String stdName;
+
+private int stdAge;
+
+private String stdAddress;
+
+}
+
+[StudentController.java]
+
+public class StudentController {
+
+public String selectStudent(HttpServletRequest req, @ModelAttribute Student student) {
+
+req.setAttribute("stdName", student.getStdName());
+
+req.setAttribute("stdAge", student.getStdAge());
+
+req.setAttribute("stdAddress", student.getStdAddress());
+
+return "student/select";
+
+}
+
+... 이하 생략
+
+}
+
+[student/select.html]
+
+<!DOCTYPE html>
+
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Document</title>
+
+</head>
+
+<body>
+
+<h1>조회 결과</h1>
+
+<h4 th:text="${stdName}+님"></h4>
+
+<h4 th:text="${stdAge}+세"></h4>
+
+<h4 th:text="${stdAddress}"></h4>
+
+</body>
+
+</html>

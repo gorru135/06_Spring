@@ -1,0 +1,6 @@
+do get 이용시 
+requestdispather(주소)
+
+do post 
+
+resp.sendredirect사용 
