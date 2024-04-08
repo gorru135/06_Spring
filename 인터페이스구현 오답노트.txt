@@ -14,6 +14,8 @@ return 구문에 redirect:​를 사용하여 조회결과 페이지로 넘겨�
 redirect:는 student/select로 다시 리턴 한다는 뜻이므로 문제의 답과 맞지 않다.
 여기서 리턴 되는 곳은 html이 아닌  student/select를 매핑하고 있는 controller로 이동 된다.
 
+---------------------------------------------------------------------------------------------------------------
+
 누락된 답
 
 이름 : <input type="text" name="name"> <br>
@@ -40,6 +42,7 @@ return "student/select";
 
 @ModelAttribute 어노테이션은 DTO 필드에 저장된 변수를 가져오는데 사용하게된다.  
 사용하려면 DTO에 저장된 객체의 변수명과 HTML name이 같아야한다.
+(@ModelAttribute 어노테이션은 생략 가능 ex) Student std)
 
 *Controller에 저장된 값 *
 req.setAttribute("stdName", student.getStdName());
