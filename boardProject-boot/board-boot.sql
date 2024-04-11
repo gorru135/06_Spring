@@ -70,3 +70,13 @@ UPDATE "MEMBER" SET
 MEMBER_PW = '$2a$10$1jN2hUupC2eX3ph.TA7ul.Hz.JBPz./tJTsBmWlF0zFW/9tZMAsAm'
 WHERE MEMBER_NO = '1';
 
+-- 이메일 중복 검사 
+SELECT COUNT(*)
+FROM "MEMBER" 
+WHERE MEMBER_DEL_FL ='N'
+AND MEMBER_EMAIL = 'user01@kh.or.kr';
+
+
+/* 이메일, 인증키 저장 테이블 생성 */ 
+
+

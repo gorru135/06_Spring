@@ -58,6 +58,12 @@ public class MemberServiceImpl implements MemberService{
 		
 		return loginMember;
 	}
+
+	@Override
+	public int checkEmail(String memberEmail) {
+		
+		return mapper.checkEmail(memberEmail);
+	}
 }
 
 /* Bcrypt 암호화 (Spring Security 제공)
