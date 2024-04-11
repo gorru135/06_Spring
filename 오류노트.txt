@@ -1,7 +1,0 @@
-오류 노트 
-
-[1] description:
-description: failed to configure a datasource: 'url' attribute is not specified and no embedded datasource could be configured. reason: failed to determine a suitable driver class action: consider the following: if you want an embedded database (h2, hsql or derby), please put it on the classpath. if you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
-
- Spring Framework를 이용해 프로젝트를 구성하는 초기에 발생 DI(의존성)에 의해 
-기능 설정이 제대로 되지 않으면 프로그램이 실행이 안된다. 
