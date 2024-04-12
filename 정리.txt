@@ -1,0 +1,2 @@
+Thymeleaf 에서 #은 message.properties의 key를 입력하면 그 key의 값이 출력 된다. 
+message.properties를 불러올때 # 사용  
