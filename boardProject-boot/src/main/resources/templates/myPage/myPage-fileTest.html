@@ -45,7 +45,7 @@
            - 제출되는 여러 데이터 타입에 맞춰서 인코딩하여 제출
             문자열 -> String
             숫자   -> String -> int/double(Spring이 처리)
-            파일   -> 2진 데이터
+            파일   -> 2진 데이터 (0과1로 컴퓨터가 읽을수 있는 언어)
 
           * text/plain
            - 텍스트로 서버에 제출
@@ -53,10 +53,74 @@
 
         </pre>
 
-     	
+        <form action="/myPage/file/test1"
+              method="post" 
+              enctype="multipart/form-data">
+          <h3>업로드 테스트 1</h3>
+          
+          <!-- type="file"도 결국에는 Parameter 
+              -> @RequestParam으로 처리 가능 
+          -->
+          <input type="file" name="uploadFile" multiple>
+
+          <button class="myPage-submit">제출하기</button>
+        </form>
+        <!-- a 태그의 download 속성 
+          - href 속성에 작성된 요청에 대한 응답을 다운로드함 
+        -->
         
+        <a th:if="${path != null}"
+           th:text="${path}"
+           th:href="${path}"
+           
+         download>업로드한 파일</a>
 
+         <img th:src="${path}">
+         <!-- /myPage/file/logo.png-->
 
+         <hr>
+
+         <form action="/myPage/file/test2"
+               method="post"
+               enctype="multipart/form-data">
+               
+            <h3>파일 업로드 + DB 저장 + 조회</h3>
+
+            <input type="file" name="uploadFile">
+
+            <button class="myPage-submit">제출하기</button>
+         </form>
+
+         <form action="/myPage/file/test3"
+               method="post"
+               enctype="multipart/form-data">
+            <h3>여러 파일 업로드</h3>
+
+            <pre>
+                1) 같은 name 속성을 가지는 type="file"
+                   요소를 여러 개 작성 
+
+                2) multiple 속성 이용 
+
+            </pre>
+            <div>
+              1번) type="file" 요소를 여러 개 작성 
+              <br>
+              <input type="file" name="aaa">
+              <br>
+              <input type="file" name="aaa">
+            </div>
+
+            <hr>
+
+            <div>
+              2번) multiple 사용 (드래그 가능)
+
+              <input type="file" name="bbb" multiple>
+
+              <button class="myPage-submit">제출하기</button>
+            </div>
+         </form>
       </section>
 
     </section>

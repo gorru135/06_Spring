@@ -1,10 +1,14 @@
 package edu.kh.project.member.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -23,7 +27,7 @@ import lombok.extern.slf4j.Slf4j;
  * 	 key 값이 일치하는 속성을 session scope로 변경  
  * 
  * )*/
-@SessionAttributes({"loginMember"})
+@SessionAttributes({"loginMember","member"})
 @Slf4j
 @RequestMapping("member")
 @Controller
@@ -187,5 +191,61 @@ public class MemberController {
 		ra.addFlashAttribute("message", message);
 		
 		return "redirect:"+ path;
+	}
+	
+	@GetMapping("quickLogin")
+	public String quickLogin(@RequestParam("memberEmail")String memberEmail,
+							 Model model,
+							 RedirectAttributes ra) {
+		
+		Member loginMember = service.quickLogin(memberEmail);
+		
+		if(loginMember == null) {
+			ra.addFlashAttribute("message","해당 이메일이 존재하지 않습니다.");
+			
+		} else {
+			
+			model.addAttribute("loginMember",loginMember);
+		}
+		
+		return "redirect:/";
+	}
+	
+	// 내가 한거 
+//	@GetMapping("quickLogin")
+//	public String quickLogin(@RequestParam("memberEmail")String memberEmail,
+//							Model model) {
+//		
+//		Member member = service.quickLogin(memberEmail);
+//		
+//		model.addAttribute("loginMember",member);
+//		
+//		return "redirect:/";
+//	}
+	
+	@ResponseBody
+	@GetMapping("selectMemberList")
+	public List<Member> selectMemberList(){
+		
+		// (java)List
+		// (Spring) HttpMessageConverter가 JSON Array(문자열)로 변경 
+		// -> (JS) response => response.js() -> JS 객체 배열 
+		
+		return service.selectMemberList();
+		
+	}
+	
+	@ResponseBody
+	@PutMapping("resetPw")
+	public int resetPw(@RequestBody int inputNo) {
+		
+		return service.resetPw(inputNo);
+	}
+	
+	@ResponseBody
+	@PutMapping("restorationMember")
+	public int restorationMember(@RequestBody int inputNo) {
+		
+		return service.restorationMember(inputNo);
 	}
 }
