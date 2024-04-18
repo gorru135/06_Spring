@@ -36,5 +36,6 @@ public class Utility {
 		// .jpg
 		
 		return date + "_"+ number + ext;
+		
 	}
 }
