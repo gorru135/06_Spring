@@ -16,6 +16,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @Builder
 public class BoardImg {
+	
 	private int imgNo;
 	private String imgPath;
 	private String imgOriginalName;

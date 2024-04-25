@@ -27,6 +27,7 @@ public class InterceptorConfig implements WebMvcConfigurer{
 		registry.addInterceptor( boardTypeInterceptor() )
 		.addPathPatterns("/**") // 가로챌 요청 주소를 지정 
 								// /** : / 이하 모든 요청 주소
+		
 		// 가로채지 않을 주소 
 		.excludePathPatterns("/css/**",
 							 "/js/**",
