@@ -55,3 +55,21 @@ document.querySelector("#boardLike").addEventListener("click", e =>{
         e.target.nextElementSibling.innerText = count;
     })
 })
+// --------------------------- 게시글 수정 ---------------------------
+const updateBtn = document.querySelector("#updateBtn");
+
+// updateBtn이 화면상에 존재 할 경우 
+if(updateBtn != null){
+    
+    updateBtn.addEventListener("click",()=>{
+
+        //GET 방식
+        // 현재 : /board/1/2001?cp=1
+        // 목표 : /editBoard/1/2001/update
+        location.href = location.pathname.replace('board','editBoard')
+            +"/update"
+            +location.search; 
+        
+    });
+
+}
